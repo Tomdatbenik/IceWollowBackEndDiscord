@@ -1,5 +1,6 @@
 package server.models;
 
+import channel.models.Channel;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import user.models.User;
 
@@ -25,6 +26,9 @@ public class IWServer {
     @ManyToMany
     private List<User> users;
 
-
+    @JsonProperty("channels")
+    @JoinColumn(name = "channel_id",referencedColumnName = "id")
+    @OneToMany
+    private List<Channel> channels;
 
 }
