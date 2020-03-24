@@ -4,7 +4,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
-import org.springframework.boot.web.embedded.undertow.ConfigurableUndertowWebServerFactory;
 import user.models.User;
 
 public class HibernateFactory {
@@ -32,7 +31,7 @@ public class HibernateFactory {
     private Configuration getConfiguration()
     {
         Configuration configuration = new Configuration();
-        if(!this.test)
+        if(!HibernateFactory.test)
         {
             configuration.configure("hibernate.cfg.xml");
         }

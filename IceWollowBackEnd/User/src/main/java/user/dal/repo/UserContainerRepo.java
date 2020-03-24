@@ -13,18 +13,18 @@ public class UserContainerRepo implements IUserContainerRepo{
     }
 
 
-    public User GetUserByEmail(String email) {
-        return context.GetUserByEmail(email);
+    public User getUserByEmail(String email) {
+        return context.getUserByEmail(email);
     }
 
 
-    public User GetUserById(Integer id) {
+    public User getUserById(Integer id) {
         return null;
     }
 
     @Override
-    public boolean AddUser(User user) {
-        return context.AddUser(user);
+    public boolean addUser(User user) {
+        return context.addUser(user);
     }
 
 }

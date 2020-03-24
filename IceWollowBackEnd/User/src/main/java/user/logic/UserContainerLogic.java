@@ -1,8 +1,5 @@
 package user.logic;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import user.dal.repo.UserContainerRepo;
 import user.factories.UserFactory;
 import user.interfaces.IUserContainerRepo;
 import user.models.User;
@@ -10,24 +7,24 @@ import user.models.User;
 //@Service
 public class UserContainerLogic {
 
-    private UserFactory userFactory = UserFactory.getInstance();
+    private UserFactory userFactory;
     private IUserContainerRepo repo;
 
     //@Autowired
     public UserContainerLogic(/*IUserContainerRepo repo*/) {
         userFactory = UserFactory.getInstance();
-        repo = userFactory.GetUserContainerRepo();
+        repo = userFactory.getUserContainerRepo();
 //        this.repo = repo;
     }
 
     public User getUserByEmail(String email) {
 //        String test = repo.getOne("1").getDisplayName();
-        return repo.GetUserByEmail(email);
+        return repo.getUserByEmail(email);
     }
 
     public boolean addUser(User user) {
-        if (repo.GetUserByEmail(user.getEmail()) == null) {
-            return repo.AddUser(user);
+        if (repo.getUserByEmail(user.getEmail()) == null) {
+            return repo.addUser(user);
         } else {
             return false;
         }

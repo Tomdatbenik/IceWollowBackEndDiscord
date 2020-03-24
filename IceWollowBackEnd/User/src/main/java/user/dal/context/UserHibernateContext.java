@@ -1,7 +1,6 @@
 package user.dal.context;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import user.factories.HibernateFactory;
 import user.interfaces.IUserContext;
@@ -9,50 +8,39 @@ import user.models.User;
 
 import javax.annotation.Nullable;
 import javax.persistence.TypedQuery;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class UserHibernateContext implements IUserContext {
     private HibernateFactory hibernateFactory;
-    private SessionFactory sessionFactory;
 
-    public UserHibernateContext( @Nullable HibernateFactory hibernateFactory) {
-        if(hibernateFactory == null)
-        {
+    public UserHibernateContext(@Nullable HibernateFactory hibernateFactory) {
+        if (hibernateFactory == null) {
             this.hibernateFactory = HibernateFactory.getInstance(false);
-        }
-        else
-        {
+        } else {
             this.hibernateFactory = hibernateFactory;
         }
-
-        this.sessionFactory = this.hibernateFactory.getSessionFactory();
     }
 
     @Override
-    public boolean AddUser(User user) {
-        boolean result = false;
+    public boolean addUser(User user) {
+        boolean result;
 
         Session session = hibernateFactory.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
 
-        try
-        {
+        try {
             session.persist(user);
             transaction.commit();
             result = true;
-        }
-        catch (Exception ex)
-        {
-            if (transaction != null)
-            {
+        } catch (Exception ex) {
+            if (transaction != null) {
                 transaction.rollback();
             }
 
             result = false;
-            ex.printStackTrace();
-        } finally
-        {
+            Logger.getLogger(UserHibernateContext.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
+        } finally {
             session.close();
         }
 
@@ -60,22 +48,22 @@ public class UserHibernateContext implements IUserContext {
     }
 
     @Override
-    public void UpdateDisplayName(String DisplayName) {
-
+    public void updateDisplayName(String displayName) {
+        //not implemented
     }
 
     @Override
-    public void UpdateBio(String bio) {
-
+    public void updateBio(String bio) {
+        //not implemented
     }
 
     @Override
-    public void SetBio(String bio) {
-
+    public void setBio(String bio) {
+        //not implemented
     }
 
     @Override
-    public User GetUserByEmail(String email) {
+    public User getUserByEmail(String email) {
         User user;
         Session session = hibernateFactory.getSessionFactory().openSession();
         try {
@@ -86,6 +74,7 @@ public class UserHibernateContext implements IUserContext {
 
             user = typedQuery.getSingleResult();
         } catch (Exception ex) {
+            Logger.getLogger(UserHibernateContext.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
             return null;
         } finally {
             session.close();
@@ -95,7 +84,7 @@ public class UserHibernateContext implements IUserContext {
     }
 
     @Override
-    public User GetUserById(Integer id) {
+    public User getUserById(Integer id) {
         return null;
     }
 }

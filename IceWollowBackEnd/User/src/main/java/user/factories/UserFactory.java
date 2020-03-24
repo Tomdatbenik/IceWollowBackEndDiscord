@@ -19,15 +19,15 @@ public class UserFactory {
         return instance;
     }
 
-    public IUserContainerRepo GetUserContainerRepo(){
+    public IUserContainerRepo getUserContainerRepo(){
         return new UserContainerRepo(new UserHibernateContext(null));
     }
 
-    public IUserContainerRepo GetTestUserContainerRepo(){
+    public IUserContainerRepo getTestUserContainerRepo(){
         return new UserContainerRepo(new UserHibernateContext(HibernateFactory.getInstance(true)));
     }
 
-    public IUserRepo GetUserRepo(){
+    public IUserRepo getUserRepo(){
         return new UserRepo();
     }
 }

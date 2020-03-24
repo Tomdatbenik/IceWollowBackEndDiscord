@@ -27,22 +27,21 @@ public class UserController {
     }
 
     @GetMapping(value = "getById/{userId}")
-    public User GetUserById(@PathVariable("userId") int userId)
+    public User getUserById(@PathVariable("userId") int userId)
     {
         return null;
     }
 
     @GetMapping(value = "getUserByEmail")
-    public User GetUserByEmail(String email)
+    public User getUserByEmail(String email)
     {
-        User user = userContainerLogic.getUserByEmail(email);
-        return user;
+        return userContainerLogic.getUserByEmail(email);
     }
 
     @PostMapping(value = "/add")
-    public boolean AddUser(@RequestBody User user)
+    public boolean addUser(@RequestBody Object user)
     {
-        return userContainerLogic.addUser(user);
+        return userContainerLogic.addUser((User)user);
     }
 
 }

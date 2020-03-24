@@ -1,0 +1,13 @@
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\java\user\controllers\UserController.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\java\user\factories\HibernateFactory.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\java\user\factories\UserFactory.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\java\user\logic\UserContainerLogic.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\java\user\security\CorsConfig.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\java\user\UserApplication.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\java\user\interfaces\IUserContext.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\java\user\models\User.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\java\user\dal\repo\UserRepo.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\java\user\interfaces\IUserRepo.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\java\user\interfaces\IUserContainerRepo.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\java\user\dal\repo\UserContainerRepo.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\java\user\dal\context\UserHibernateContext.java
