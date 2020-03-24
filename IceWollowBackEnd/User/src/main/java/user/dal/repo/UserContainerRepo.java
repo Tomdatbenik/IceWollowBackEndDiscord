@@ -1,17 +1,30 @@
 package user.dal.repo;
 
 import user.interfaces.IUserContainerRepo;
+import user.interfaces.IUserContext;
 import user.models.User;
 
-public class UserContainerRepo implements IUserContainerRepo {
+public class UserContainerRepo implements IUserContainerRepo{
 
-    @Override
-    public User GetUserByEmail(String email) {
-        return null;
+    private IUserContext context;
+
+    public UserContainerRepo(IUserContext context) {
+        this.context = context;
     }
 
-    @Override
+
+    public User GetUserByEmail(String email) {
+        return context.GetUserByEmail(email);
+    }
+
+
     public User GetUserById(Integer id) {
         return null;
     }
+
+    @Override
+    public boolean AddUser(User user) {
+        return context.AddUser(user);
+    }
+
 }

@@ -1,5 +1,6 @@
 package user.factories;
 
+import user.dal.context.UserHibernateContext;
 import user.dal.repo.UserContainerRepo;
 import user.dal.repo.UserRepo;
 import user.interfaces.IUserContainerRepo;
@@ -19,12 +20,14 @@ public class UserFactory {
     }
 
     public IUserContainerRepo GetUserContainerRepo(){
-        return new UserContainerRepo();
+        return new UserContainerRepo(new UserHibernateContext(null));
+    }
+
+    public IUserContainerRepo GetTestUserContainerRepo(){
+        return new UserContainerRepo(new UserHibernateContext(HibernateFactory.getInstance(true)));
     }
 
     public IUserRepo GetUserRepo(){
         return new UserRepo();
     }
-
-
 }

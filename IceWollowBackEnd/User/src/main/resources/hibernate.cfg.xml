@@ -10,7 +10,7 @@
         <property name="connection.password">T0md4tb3n1k</property>
 
         <!-- JDBC connection pool settings ... using built-in test pool -->
-        <property name="connection.pool_size">1</property>
+        <property name="connection.pool_size">10</property>
 
         <!-- Select our SQL dialect -->
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
@@ -22,7 +22,7 @@
         <property name="current_session_context_class">thread</property>
 
         <!-- Drop and re-create the database schema on startup -->
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
 
         <!-- dbcp connection pool configuration -->
         <property name="hibernate.dbcp.initialSize">5</property>

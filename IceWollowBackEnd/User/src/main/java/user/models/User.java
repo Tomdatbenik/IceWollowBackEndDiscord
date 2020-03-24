@@ -1,21 +1,47 @@
 package user.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name="User")
 public class User {
-
+    @GeneratedValue
     @Id
     @Column(name="id", unique = true)
+    @JsonProperty("id")
     private int id;
 
+    @JsonProperty("displayName")
     @Column(name="displayName")
     private String displayName;
 
-    @Column(name="email", unique = true)
+    @JsonProperty("email")
+    @Column(name="email")
     private String email;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

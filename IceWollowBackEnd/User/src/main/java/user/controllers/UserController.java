@@ -1,31 +1,48 @@
 package user.controllers;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.google.gson.Gson;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
+import user.logic.UserContainerLogic;
 import user.models.User;
 
-@Controller
-@RequestMapping("/user")
+@RestController
+@RequestMapping(path= "user", produces = MediaType.APPLICATION_JSON_VALUE)
 public class UserController {
 
-    @PostMapping(value = "/add", consumes = "application/json", produces = "application/json")
-    public String randomNames() {
+    //@Autowired
+    private UserContainerLogic userContainerLogic = new UserContainerLogic();
+
+    @PostMapping(value = "test", consumes = "application/json", produces = "application/json")
+    public String testPost() {
         return "test";
     }
 
-    @GetMapping(value = "/getById/{userId}")
-    public User GetUserById(@PathVariable("userId") int userId)
-    {
-        return new User();
+    @GetMapping(value = "test")
+    public String testGet() {
+        Gson gson = new Gson();
+
+        return gson.toJson(new User());
     }
 
-    @GetMapping(value = "/getById/{email}")
-    public boolean CheckUserByEmail(@PathVariable("email") String email)
+    @GetMapping(value = "getById/{userId}")
+    public User GetUserById(@PathVariable("userId") int userId)
     {
-        return false;
+        return null;
+    }
+
+    @GetMapping(value = "getUserByEmail")
+    public User GetUserByEmail(String email)
+    {
+        User user = userContainerLogic.getUserByEmail(email);
+        return user;
+    }
+
+    @PostMapping(value = "/add")
+    public boolean AddUser(@RequestBody User user)
+    {
+        return userContainerLogic.addUser(user);
     }
 
 }

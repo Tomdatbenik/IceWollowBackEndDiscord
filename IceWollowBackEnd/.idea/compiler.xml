@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="User" />
         <module name="HibernateShared" />
+        <module name="IceWollowServer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,6 +18,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="HibernateShared" options="-parameters" />
+      <module name="IceWollowServer" options="-parameters" />
       <module name="User" options="-parameters" />
     </option>
   </component>
