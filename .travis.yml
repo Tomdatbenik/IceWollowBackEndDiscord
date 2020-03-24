@@ -7,4 +7,3 @@ script:
   - cd IceWollowBackEnd
   - mvn clean verify
   - mvn clean install sonar:sonar -Pcoverage -Dsonar.projectKey=tomdatbenik
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=Tomdatbenik_Collapporation-Backend
