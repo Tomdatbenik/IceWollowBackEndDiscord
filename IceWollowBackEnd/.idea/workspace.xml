@@ -41,7 +41,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/User/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Channel/src/main/java/channel" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -51,6 +51,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\Channel\src\main\java\channel" />
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -61,7 +62,7 @@
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\HibernateShared\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserApplication">
+  <component name="RunManager" selected="JUnit.usercomponent in User">
     <configuration name="UserContainerLogicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="User" />
       <extension name="coverage">
@@ -73,6 +74,20 @@
       <option name="PACKAGE_NAME" value="usercomponent.logic" />
       <option name="MAIN_CLASS_NAME" value="usercomponent.logic.UserContainerLogicTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="usercomponent in User" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="User" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="usercomponent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="usercomponent" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -92,6 +107,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.usercomponent in User" />
         <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="JUnit.UserContainerLogicTest" />
       </list>
@@ -131,7 +147,7 @@
       <workItem from="1584883125555" duration="9226000" />
       <workItem from="1584907117683" duration="3759000" />
       <workItem from="1584962590132" duration="8936000" />
-      <workItem from="1585041862867" duration="4184000" />
+      <workItem from="1585041862867" duration="4598000" />
     </task>
     <servers />
   </component>
@@ -222,10 +238,10 @@
     </state>
     <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584349944214" />
     <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1583748259063" />
-    <state x="342" y="235" key="new project wizard" timestamp="1585050103228">
+    <state x="342" y="235" key="new project wizard" timestamp="1585052874256">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="342" y="235" key="new project wizard/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1585050103228" />
+    <state x="342" y="235" key="new project wizard/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1585052874256" />
     <state x="342" y="235" key="new project wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1583703183859" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1584964045237">
       <screen x="0" y="0" width="1920" height="1080" />
