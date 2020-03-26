@@ -44,4 +44,12 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public User(String displayName, String email) {
+        this.displayName = displayName;
+        this.email = email;
+    }
+
+    public User() {
+    }
 }

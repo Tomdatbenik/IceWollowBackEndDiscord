@@ -1,6 +1,7 @@
-user\controllers\UserController.class
 user\dal\context\UserHibernateContext.class
 user\dal\repo\UserContainerRepo.class
+user\controllers\UserContainerController.class
+user\models\datamodels\UserDataModel.class
 user\interfaces\IUserRepo.class
 user\UserApplication.class
 user\interfaces\IUserContainerRepo.class
