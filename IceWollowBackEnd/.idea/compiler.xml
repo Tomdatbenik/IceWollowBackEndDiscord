@@ -7,13 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Hibernate" />
-        <module name="Channel" />
+        <module name="Chat" />
         <module name="User" />
         <module name="HibernateShared" />
         <module name="IceWollowServer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Channel" target="1.8" />
       <module name="Hibernate" target="1.8" />
       <module name="HibernateShared" target="1.8" />
     </bytecodeTargetLevel>
@@ -21,6 +22,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Channel" options="-parameters" />
+      <module name="Chat" options="-parameters" />
       <module name="Hibernate" options="-parameters" />
       <module name="HibernateShared" options="-parameters" />
       <module name="IceWollowServer" options="-parameters" />

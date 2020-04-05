@@ -9,10 +9,15 @@
         <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
         <property name="hibernate.connection.username">sa</property>
         <property name="hibernate.connection.password"></property>
-        <property name="hibernate.connection.url">jdbc:hsqldb:mem:howtodoinjava</property>
+        <property name="hibernate.connection.url">jdbc:hsqldb:mem:test</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- register entities-->
+        <mapping class="server.models.IWServer" />
+        <mapping class="server.models.Channel" />
+        <mapping class="server.models.VoiceChannel" />
+        <mapping class="server.models.TextChannel" />
+        <mapping class="chat.models.Chat" />
         <mapping class="user.models.User" />
     </session-factory>
 </hibernate-configuration>

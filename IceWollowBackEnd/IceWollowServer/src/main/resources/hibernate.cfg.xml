@@ -32,6 +32,11 @@
         <property name="hibernate.dbcp.maxWaitMillis">-1</property>
 
         <!-- register entities-->
+        <mapping class="server.models.IWServer" />
+        <mapping class="server.models.Channel" />
+        <mapping class="server.models.VoiceChannel" />
+        <mapping class="server.models.TextChannel" />
+        <mapping class="chat.models.Chat" />
         <mapping class="user.models.User" />
     </session-factory>
 </hibernate-configuration>

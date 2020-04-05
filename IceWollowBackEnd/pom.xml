@@ -11,7 +11,7 @@
     <modules>
         <module>User</module>
         <module>IceWollowServer</module>
-        <module>Channel</module>
+        <module>Chat</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

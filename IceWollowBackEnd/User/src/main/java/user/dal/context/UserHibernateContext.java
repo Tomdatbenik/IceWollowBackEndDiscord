@@ -2,7 +2,7 @@ package user.dal.context;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import user.factories.HibernateFactory;
+import user.dal.hibernate.HibernateFactory;
 import user.interfaces.IUserContext;
 import user.models.User;
 
@@ -16,7 +16,7 @@ public class UserHibernateContext implements IUserContext {
 
     public UserHibernateContext(@Nullable HibernateFactory hibernateFactory) {
         if (hibernateFactory == null) {
-            this.hibernateFactory = HibernateFactory.getInstance(false);
+            this.hibernateFactory = HibernateFactory.getInstance();
         } else {
             this.hibernateFactory = hibernateFactory;
         }

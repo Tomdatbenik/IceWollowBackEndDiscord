@@ -5,7 +5,7 @@
     <session-factory>
         <!-- JDBC Database connection settings -->
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://tomdatbenik.nl:3306/IceWollow</property>
+        <property name="connection.url">jdbc:mysql://tomdatbenik.nl:3306/IceWollowTest</property>
         <property name="connection.username">tomtrolt</property>
         <property name="connection.password">T0md4tb3n1k</property>
 
