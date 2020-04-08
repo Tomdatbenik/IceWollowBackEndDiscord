@@ -17,13 +17,25 @@ public class ChannelDTO {
         this.id = channel.getId();
         this.name = channel.getName();
 
-        if(Channel.class.getName() == TextChannel.class.getName())
+        if(channel.getClass().getName() == TextChannel.class.getName())
         {
             type = ChannelType.TEXT;
         }
-        else  if(Channel.class.getName() == VoiceChannel.class.getName())
+        else  if(channel.getClass().getName() == VoiceChannel.class.getName())
         {
             type = ChannelType.VOICE;
         }
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public ChannelType getType() {
+        return type;
     }
 }

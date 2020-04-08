@@ -14,7 +14,7 @@ public class ServerContainerLogic {
     private ServerFactory serverFactory;
     private IServerContainerRepo repo;
 
-    public ServerContainerLogic(/*IUserContainerRepo repo*/) {
+    public ServerContainerLogic() {
         serverFactory = ServerFactory.getInstance();
         repo = serverFactory.getServerContainerRepo();
     }
@@ -24,12 +24,17 @@ public class ServerContainerLogic {
         return repo.getAllServersByUser(user);
     }
 
-    public boolean addServer(IWServer server)
+    public IWServer addServer(IWServer server)
     {
         //Add 2 channels for general chat at the start of a server creation.
         server.getTextChannels().add(new TextChannel("General"));
         server.getVoiceChannels().add(new VoiceChannel("General"));
-
+        server.getUsers().add(server.getOwner());
         return repo.addServer(server);
+    }
+
+    public IWServer getServerById(int id)
+    {
+        return repo.getServerById(id);
     }
 }

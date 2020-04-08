@@ -25,7 +25,8 @@ public class IWServer {
     @JsonProperty("users")
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     @ManyToMany
-    private List<User> users;
+    @LazyCollection(LazyCollectionOption.FALSE)
+    private List<User> users = new ArrayList<>();
 
     @JsonProperty("channels")
     @OneToMany(cascade = CascadeType.ALL)

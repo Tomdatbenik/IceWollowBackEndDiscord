@@ -85,6 +85,18 @@ public class UserHibernateContext implements IUserContext {
 
     @Override
     public User getUserById(Integer id) {
-        return null;
+        User user;
+
+        Session session = hibernateFactory.getSessionFactory().openSession();
+        try {
+            user = session.find(User.class,id);
+        } catch (Exception ex) {
+            Logger.getLogger(UserHibernateContext.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
+            return null;
+        } finally {
+            session.close();
+        }
+
+        return user;
     }
 }

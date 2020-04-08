@@ -13,6 +13,6 @@ public class ServerRepo implements IServerRepo {
 
     @Override
     public boolean updateServer(IWServer server) {
-        return false;
+        return context.updateServer(server);
     }
 }

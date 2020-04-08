@@ -23,6 +23,11 @@ public class UserContainerLogic {
         return repo.getUserByEmail(email);
     }
 
+    public User getUserById(int id) {
+//        String test = repo.getOne("1").getDisplayName();
+        return repo.getUserById(id);
+    }
+
     public boolean addUser(User user) {
         if (repo.getUserByEmail(user.getEmail()) == null) {
             return repo.addUser(user);

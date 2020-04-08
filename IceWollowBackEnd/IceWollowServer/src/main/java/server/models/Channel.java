@@ -1,6 +1,7 @@
 package server.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import server.models.dtomodels.ChannelDTO;
 import user.models.User;
 
 import javax.persistence.*;
@@ -20,6 +21,10 @@ public  abstract class Channel {
     private String name;
 
     public Channel() {
+    }
+
+    public Channel(ChannelDTO channelDTO) {
+        this.name = channelDTO.getName();
     }
 
     public Channel(String name ) {

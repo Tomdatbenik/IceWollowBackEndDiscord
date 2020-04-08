@@ -8,7 +8,7 @@ import java.util.List;
 public interface IServerContext {
     boolean updateServer(IWServer server);
 
-    boolean addServer(IWServer server);
+    IWServer addServer(IWServer server);
 
     List<IWServer> getAllServersByUser(User user);
 

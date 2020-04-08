@@ -42,10 +42,6 @@ public class ServerContainerLogicTest {
         server.setName("Test server");
         server.setOwner(user);
 
-        boolean result = serverContainerLogic.addServer(server);
-
-        Assert.assertTrue(result);
-
         IWServer resultServer = new IWServer();
 
         Session session = hibernateFactory.getSessionFactory().openSession();

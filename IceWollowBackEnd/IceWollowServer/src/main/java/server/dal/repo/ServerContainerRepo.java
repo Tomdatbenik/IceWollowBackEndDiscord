@@ -15,19 +15,18 @@ public class ServerContainerRepo implements IServerContainerRepo {
         this.context = context;
     }
 
-
     @Override
-    public boolean addServer(IWServer server) {
+    public IWServer addServer(IWServer server) {
         return context.addServer(server);
     }
 
     @Override
     public List<IWServer> getAllServersByUser(User user) {
-        return null;
+        return context.getAllServersByUser(user);
     }
 
     @Override
     public IWServer getServerById(int id) {
-        return null;
+        return context.getServerById(id);
     }
 }

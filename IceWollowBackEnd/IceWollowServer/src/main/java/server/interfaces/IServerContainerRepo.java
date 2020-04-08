@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IServerContainerRepo {
 
-    boolean addServer(IWServer server);
+    IWServer addServer(IWServer server);
 
     List<IWServer> getAllServersByUser(User user);
 

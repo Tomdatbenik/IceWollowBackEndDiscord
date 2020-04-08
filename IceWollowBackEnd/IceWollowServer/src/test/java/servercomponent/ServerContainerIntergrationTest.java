@@ -46,9 +46,7 @@ public class ServerContainerIntergrationTest {
             server.setName("Test server");
             server.setOwner(user);
 
-            boolean result = repo.addServer(server);
-
-            Assert.assertTrue(result);
+            server = repo.addServer(server);
 
             IWServer resultServer = new IWServer();
 
