@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="IceWollowServerWebsocketServer" />
+        <module name="Channel" />
+        <module name="User" />
         <module name="HibernateShared" />
         <module name="User" />
         <module name="IceWollowServer" />
@@ -19,6 +21,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Channel" options="-parameters" />
       <module name="HibernateShared" options="-parameters" />
       <module name="IceWollowServer" options="-parameters" />
       <module name="IceWollowServerWebsocketServer" options="-parameters" />

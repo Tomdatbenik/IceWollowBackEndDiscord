@@ -9,10 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>User</artifactId>
+    <artifactId>Channel</artifactId>
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.IceWollow</groupId>
+            <artifactId>User</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
-
 </project>
