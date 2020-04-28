@@ -8,6 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="IceWollowServerWebsocketServer" />
         <module name="Channel" />
+        <module name="Hibernate" />
+        <module name="Chat" />
         <module name="User" />
         <module name="HibernateShared" />
         <module name="User" />
@@ -16,12 +18,16 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Chat" target="1.8" />
+      <module name="Channel" target="1.8" />
+      <module name="Hibernate" target="1.8" />
       <module name="HibernateShared" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Channel" options="-parameters" />
+      <module name="Chat" options="-parameters" />
+      <module name="Hibernate" options="-parameters" />
       <module name="HibernateShared" options="-parameters" />
       <module name="IceWollowServer" options="-parameters" />
       <module name="IceWollowServerWebsocketServer" options="-parameters" />

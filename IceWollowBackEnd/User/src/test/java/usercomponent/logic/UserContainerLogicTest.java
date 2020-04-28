@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import user.dal.context.UserHibernateContext;
 import user.dal.repo.UserContainerRepo;
-import user.factories.HibernateFactory;
+import user.dal.hibernate.HibernateFactory;
 import user.interfaces.IUserContainerRepo;
 import user.interfaces.IUserContext;
 import user.logic.UserContainerLogic;
@@ -23,7 +23,7 @@ public class UserContainerLogicTest {
 
     @Before
     public void setUp() {
-        hibernateFactory = HibernateFactory.getInstance(true);
+        hibernateFactory = HibernateFactory.getTestInstance(true);
         mockContext = new UserHibernateContext(hibernateFactory);
 
         repo = new UserContainerRepo(mockContext);

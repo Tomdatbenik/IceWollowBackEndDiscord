@@ -13,6 +13,7 @@
         <module>IceWollowServer</module>
         <module>IceWollowServerWebsocketServer</module>
         <module>Channel</module>
+        <module>Chat</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

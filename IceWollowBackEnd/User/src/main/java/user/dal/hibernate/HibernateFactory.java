@@ -1,4 +1,4 @@
-package user.factories;
+package user.dal.hibernate;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -9,16 +9,29 @@ import user.models.User;
 public class HibernateFactory {
 
     private static HibernateFactory instance;
-    private static boolean test;
+    private static HibernateFactory testInstance;
+    private boolean test;
+    private boolean memoryTest;
 
-    public static HibernateFactory getInstance(boolean test) {
+    public static HibernateFactory getInstance() {
         if(instance == null)
         {
             instance = new HibernateFactory();
         }
 
-        HibernateFactory.test = test;
         return instance;
+    }
+
+
+    public static HibernateFactory getTestInstance(boolean memory) {
+        if(testInstance == null)
+        {
+            testInstance = new HibernateFactory();
+        }
+
+        testInstance.test = true;
+        testInstance.memoryTest = memory;
+        return testInstance;
     }
 
     public SessionFactory getSessionFactory() {
@@ -31,14 +44,22 @@ public class HibernateFactory {
     private Configuration getConfiguration()
     {
         Configuration configuration = new Configuration();
-        if(!HibernateFactory.test)
+        if(!this.test)
         {
             configuration.configure("hibernate.cfg.xml");
         }
         else
         {
-            configuration.configure("hibernate.cfg.test.xml");
+            if(this.memoryTest)
+            {
+                configuration.configure("hibernate.cfg.test.xml");
+            }
+            else
+            {
+                configuration.configure("hibernate.cfg.integration.test.xml");
+            }
         }
+
 
         configuration.addAnnotatedClass(User.class);
 

@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Channel</artifactId>
-
+    <artifactId>Chat</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.IceWollow</groupId>
@@ -19,4 +18,6 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
+
+
 </project>

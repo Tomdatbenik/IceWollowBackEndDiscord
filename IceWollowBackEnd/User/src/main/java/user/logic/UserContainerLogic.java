@@ -10,6 +10,7 @@ public class UserContainerLogic {
     private UserFactory userFactory;
     private IUserContainerRepo repo;
 
+
     //@Autowired
     public UserContainerLogic(/*IUserContainerRepo repo*/) {
         userFactory = UserFactory.getInstance();
@@ -20,6 +21,11 @@ public class UserContainerLogic {
     public User getUserByEmail(String email) {
 //        String test = repo.getOne("1").getDisplayName();
         return repo.getUserByEmail(email);
+    }
+
+    public User getUserById(int id) {
+//        String test = repo.getOne("1").getDisplayName();
+        return repo.getUserById(id);
     }
 
     public boolean addUser(User user) {
