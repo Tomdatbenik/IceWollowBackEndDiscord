@@ -11,6 +11,7 @@
     <modules>
         <module>User</module>
         <module>IceWollowServer</module>
+        <module>IceWollowServerWebsocketServer</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="User" />
+        <module name="IceWollowServerWebsocketServer" />
         <module name="HibernateShared" />
+        <module name="User" />
         <module name="IceWollowServer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Chat" target="1.8" />
       <module name="HibernateShared" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -19,6 +21,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="HibernateShared" options="-parameters" />
       <module name="IceWollowServer" options="-parameters" />
+      <module name="IceWollowServerWebsocketServer" options="-parameters" />
       <module name="User" options="-parameters" />
     </option>
   </component>
