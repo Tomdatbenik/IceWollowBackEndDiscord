@@ -3,9 +3,9 @@ package websocketserver.util;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-import websocketserver.service.ChatService;;
+import websocketserver.service.ServerService;;
 
-public class ChatBeanUtil implements ApplicationContextAware {
+public class ServerBeanUtil implements ApplicationContextAware {
     private static ApplicationContext appCxt;
 
     @Override
@@ -13,7 +13,7 @@ public class ChatBeanUtil implements ApplicationContextAware {
         appCxt = applicationContext;
     }
 
-    public static ChatService getStockpileService() throws BeansException {
-        return (ChatService) appCxt.getAutowireCapableBeanFactory().getBean("chatSvc");
+    public static ServerService getStockpileService() throws BeansException {
+        return (ServerService) appCxt.getAutowireCapableBeanFactory().getBean("serverSvc");
     }
 }

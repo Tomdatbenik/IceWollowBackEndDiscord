@@ -2,12 +2,17 @@ package websocketserver.handlers;
 
 import org.eclipse.jetty.websocket.api.Session;
 import websocketserver.interfaces.IHandler;
-import websocketserver.models.Message;
+import websocketserver.messages.BaseMessage;
 
-public class HelloWorldHandler implements IHandler<Message> {
+public class HelloWorldHandler implements IHandler<BaseMessage> {
 
     @Override
-    public void Handle(Message messageObject, Session session) {
+    public BaseMessage getEmptyMessageObject() {
+        return new BaseMessage();
+    }
+
+    @Override
+    public void Handle(BaseMessage messageObject, Session session) {
         System.out.println(session.getRemote() + " " + messageObject.getContent());
     }
 }

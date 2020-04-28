@@ -2,11 +2,11 @@ package websocketserver.serverlets;
 
 import org.eclipse.jetty.websocket.servlet.WebSocketServlet;
 import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
-import websocketserver.socket.ChatSocket;
+import websocketserver.socket.ServerSocket;
 
-public class ChatServlet extends WebSocketServlet {
+public class ServerServlet extends WebSocketServlet {
     @Override
     public void configure(WebSocketServletFactory webSocketServletFactory) {
-        webSocketServletFactory.register(ChatSocket.class);
+        webSocketServletFactory.register(ServerSocket.class);
     }
 }

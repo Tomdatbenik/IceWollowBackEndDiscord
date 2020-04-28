@@ -11,6 +11,7 @@ public class ServerDTO {
 
     private int id;
     private String name;
+    private List<User> users;
     private User owner;
 
     private List<ChannelDTO> channels = new ArrayList<>();
@@ -21,6 +22,7 @@ public class ServerDTO {
     public ServerDTO(IWServer server) {
         this.id = server.getId();
         this.name = server.getName();
+        this.users = server.getUsers();
 
         server.getChannels().stream().forEach(c-> {
             this.channels.add(new ChannelDTO(c));
@@ -39,6 +41,10 @@ public class ServerDTO {
 
     public User getOwner() {
         return owner;
+    }
+
+    public List<User> getUsers() {
+        return users;
     }
 
     public List<ChannelDTO> getChannels() {

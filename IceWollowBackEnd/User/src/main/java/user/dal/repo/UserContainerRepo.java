@@ -19,7 +19,7 @@ public class UserContainerRepo implements IUserContainerRepo{
 
 
     public User getUserById(Integer id) {
-        return null;
+        return context.getUserById(id);
     }
 
     @Override
