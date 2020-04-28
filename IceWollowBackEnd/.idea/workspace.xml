@@ -73,7 +73,7 @@
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\Channel\src\main\java\channel" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServerApplication">
+  <component name="RunManager" selected="JUnit.ServerContainerIntergrationTest">
     <configuration name="ServerContainerIntergrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IceWollowServer" />
       <extension name="coverage">
@@ -197,7 +197,7 @@
       <workItem from="1586869132704" duration="1085000" />
       <workItem from="1587026536623" duration="7000" />
       <workItem from="1587376317508" duration="5134000" />
-      <workItem from="1588072493462" duration="240000" />
+      <workItem from="1588072493462" duration="413000" />
     </task>
     <servers />
   </component>
@@ -340,10 +340,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/IceWollowBackEnd$ServerContainerLogicTest.ic" NAME="ServerContainerLogicTest Coverage Results" MODIFIED="1585748181404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>servercomponent.*</FILTER>
-    </SUITE>
   </component>
 </project>
