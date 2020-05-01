@@ -5,6 +5,7 @@ import org.eclipse.jetty.websocket.api.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import user.models.User;
+import websocketserver.managers.ServerManager;
 import websocketserver.messages.BaseMessage;
 
 import java.io.IOException;
@@ -17,6 +18,10 @@ public class Client {
         return user;
     }
 
+    public Session getSession() {
+        return session;
+    }
+
     public Client(User user, Session session) {
         this.session = session;
         this.user = user;
@@ -25,7 +30,7 @@ public class Client {
     private final Logger logger = LoggerFactory.getLogger(Client.class);
     private Gson gson = new Gson();
 
-    public void SendMessage(BaseMessage message) {
+    public void sendMessage(BaseMessage message) {
         try {
             session.getRemote().sendString(gson.toJson(message));
         } catch (IOException e) {

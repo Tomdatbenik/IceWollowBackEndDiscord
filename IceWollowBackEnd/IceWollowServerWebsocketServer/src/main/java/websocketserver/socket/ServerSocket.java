@@ -8,7 +8,7 @@ import org.eclipse.jetty.websocket.api.annotations.WebSocket;
 import websocketserver.util.ServerBeanUtil;
 
 
-@WebSocket
+@WebSocket(maxIdleTime = 90000000)
 public class ServerSocket {
 
     @OnWebSocketConnect
@@ -19,7 +19,7 @@ public class ServerSocket {
 
     @OnWebSocketClose
     public void onClose(Session session, int _closeCode, String _closeReason) {
-        //ChatBeanUtil.getStockpileService().removeClient(session);
+        ServerBeanUtil.getStockpileService().removeClient(session);
     }
 
     @OnWebSocketMessage

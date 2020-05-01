@@ -5,6 +5,7 @@ import server.models.dtomodels.ChannelDTO;
 import user.models.User;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 

@@ -8,7 +8,9 @@ import org.springframework.stereotype.Service;
 import settlementcomponent.Application;
 import websocketserver.factory.InstanceFactory;
 import websocketserver.interfaces.IHandler;
+import websocketserver.managers.ServerManager;
 import websocketserver.messages.BaseMessage;
+import websocketserver.models.Client;
 
 import javax.annotation.PostConstruct;
 
@@ -24,7 +26,9 @@ public class ServerService {
     }
 
     public void removeClient(Session session) {
-
+        ServerManager serverManager = ServerManager.getInstance();
+        Client client = serverManager.getObserverBySession(session).getClient();
+        serverManager.removeClient(client);
     }
 
     @PostConstruct
