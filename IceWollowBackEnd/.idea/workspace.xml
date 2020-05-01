@@ -57,10 +57,9 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\resources" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\IceWollowServer\src\main\resources" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\Channel\src\main\java\channel" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\HibernateShared\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="websocketserver.handlers" />
@@ -69,14 +68,15 @@
       <recent name="hibernate" />
       <recent name="server.factories" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\resources" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\HibernateShared\src\main\resources" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\IceWollowServer\src\main\resources" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\Channel\src\main\java\channel" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ServerSocketApplication">
     <configuration name="ServerContainerIntergrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IceWollowServer" />
+      <module name="IceWollowServerView" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="servercomponent.*" />
@@ -91,7 +91,7 @@
       </method>
     </configuration>
     <configuration name="ServerContainerIntergrationTest.testAddServer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IceWollowServer" />
+      <module name="IceWollowServerView" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="servercomponent.*" />
@@ -107,7 +107,7 @@
       </method>
     </configuration>
     <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="IceWollowServer" />
+      <module name="IceWollowServerView" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="server.*" />
@@ -133,7 +133,7 @@
       </method>
     </configuration>
     <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="User" />
+      <module name="UserView" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="user.*" />
@@ -199,7 +199,7 @@
       <workItem from="1588072493462" duration="14790000" />
       <workItem from="1588163656955" duration="9144000" />
       <workItem from="1588242949774" duration="5369000" />
-      <workItem from="1588330937209" duration="1031000" />
+      <workItem from="1588330937209" duration="2268000" />
     </task>
     <servers />
   </component>
@@ -216,10 +216,10 @@
     </state>
     <state x="765" y="255" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588172732091" />
     <state x="765" y="255" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1588090741603" />
-    <state x="478" y="465" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583748585982">
+    <state x="478" y="465" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1588332745231">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="478" y="465" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1585744990235" />
+    <state x="478" y="465" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588332745231" />
     <state x="478" y="465" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1583748585982" />
     <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588088979507">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -244,45 +244,45 @@
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588167746279" />
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1588074830923" />
-    <state width="1877" height="328" key="GridCell.Tab.0.bottom" timestamp="1588332050418">
+    <state width="1877" height="328" key="GridCell.Tab.0.bottom" timestamp="1588333231623">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="328" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588332050418" />
+    <state width="1877" height="328" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588333231623" />
     <state width="1877" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588096732869" />
-    <state width="1877" height="328" key="GridCell.Tab.0.center" timestamp="1588332050418">
+    <state width="1877" height="328" key="GridCell.Tab.0.center" timestamp="1588333231623">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="328" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588332050418" />
+    <state width="1877" height="328" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588333231623" />
     <state width="1877" height="298" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588096732869" />
-    <state width="1877" height="328" key="GridCell.Tab.0.left" timestamp="1588332050418">
+    <state width="1877" height="328" key="GridCell.Tab.0.left" timestamp="1588333231623">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="328" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588332050418" />
+    <state width="1877" height="328" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588333231623" />
     <state width="1877" height="298" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588096732869" />
-    <state width="1877" height="328" key="GridCell.Tab.0.right" timestamp="1588332050418">
+    <state width="1877" height="328" key="GridCell.Tab.0.right" timestamp="1588333231623">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="328" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588332050418" />
+    <state width="1877" height="328" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588333231623" />
     <state width="1877" height="298" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588096732869" />
-    <state width="1877" height="328" key="GridCell.Tab.1.bottom" timestamp="1588332050419">
+    <state width="1877" height="328" key="GridCell.Tab.1.bottom" timestamp="1588333231623">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="328" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588332050419" />
+    <state width="1877" height="328" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588333231623" />
     <state width="1877" height="298" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588096732870" />
-    <state width="1877" height="328" key="GridCell.Tab.1.center" timestamp="1588332050418">
+    <state width="1877" height="328" key="GridCell.Tab.1.center" timestamp="1588333231623">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="328" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588332050418" />
+    <state width="1877" height="328" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588333231623" />
     <state width="1877" height="298" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588096732870" />
-    <state width="1877" height="328" key="GridCell.Tab.1.left" timestamp="1588332050418">
+    <state width="1877" height="328" key="GridCell.Tab.1.left" timestamp="1588333231623">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="328" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588332050418" />
+    <state width="1877" height="328" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588333231623" />
     <state width="1877" height="298" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588096732869" />
-    <state width="1877" height="328" key="GridCell.Tab.1.right" timestamp="1588332050418">
+    <state width="1877" height="328" key="GridCell.Tab.1.right" timestamp="1588333231623">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="328" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588332050418" />
+    <state width="1877" height="328" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588333231623" />
     <state width="1877" height="298" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588096732870" />
     <state width="1877" height="394" key="GridCell.Tab.2.bottom" timestamp="1588177543963">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -321,10 +321,10 @@
     </state>
     <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588163663449" />
     <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587377092188" />
-    <state x="342" y="235" key="new project wizard" timestamp="1587377154067">
+    <state x="342" y="235" key="new project wizard" timestamp="1588332486543">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="342" y="235" key="new project wizard/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1585050103228" />
+    <state x="342" y="235" key="new project wizard/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588332486543" />
     <state x="342" y="235" key="new project wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1587377154067" />
     <state x="666" y="168" key="refactoring.ChangeSignatureDialog" timestamp="1588176753131">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -345,12 +345,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/User/src/test/java/usercomponent/logic/UserContainerLogicTest.java</url>
+          <url>file://$PROJECT_DIR$/UserView/src/test/java/usercomponent/logic/UserContainerLogicTest.java</url>
           <line>62</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/IceWollowServer/src/test/java/servercomponent/ServerContainerIntergrationTest.java</url>
+          <url>file://$PROJECT_DIR$/IceWollowServerView/src/test/java/servercomponent/ServerContainerIntergrationTest.java</url>
           <line>40</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>

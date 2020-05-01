@@ -1,8 +1,8 @@
 package websocketserver.handlers;
 
 import org.eclipse.jetty.websocket.api.Session;
-import user.logic.UserContainerLogic;
-import user.models.User;
+import userlogic.logic.UserContainerLogic;
+import userlogic.models.User;
 import websocketserver.interfaces.IHandler;
 import websocketserver.managers.ServerManager;
 import websocketserver.messages.ServerMessage;

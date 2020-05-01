@@ -6,16 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="User" />
+        <module name="UserLogic" />
         <module name="HibernateShared" />
         <module name="IceWollowServerWebsocketServer" />
-        <module name="Chat" />
-        <module name="Channel" />
-        <module name="IceWollowServer" />
+        <module name="ChatLogic" />
+        <module name="ServerLogic" />
+        <module name="UserView" />
+        <module name="IceWollowServerView" />
         <module name="Hibernate" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Channel" target="1.8" />
       <module name="Hibernate" target="1.8" />
       <module name="HibernateShared" target="1.8" />
     </bytecodeTargetLevel>
@@ -23,12 +25,14 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Channel" options="-parameters" />
-      <module name="Chat" options="-parameters" />
+      <module name="ChatLogic" options="-parameters" />
       <module name="Hibernate" options="-parameters" />
       <module name="HibernateShared" options="-parameters" />
-      <module name="IceWollowServer" options="-parameters" />
+      <module name="IceWollowServerView" options="-parameters" />
       <module name="IceWollowServerWebsocketServer" options="-parameters" />
-      <module name="User" options="-parameters" />
+      <module name="ServerLogic" options="-parameters" />
+      <module name="UserLogic" options="-parameters" />
+      <module name="UserView" options="-parameters" />
     </option>
   </component>
 </project>

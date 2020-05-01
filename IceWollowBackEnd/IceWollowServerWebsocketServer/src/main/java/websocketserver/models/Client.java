@@ -4,8 +4,7 @@ import com.google.gson.Gson;
 import org.eclipse.jetty.websocket.api.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import user.models.User;
-import websocketserver.managers.ServerManager;
+import userlogic.models.User;
 import websocketserver.messages.BaseMessage;
 
 import java.io.IOException;
