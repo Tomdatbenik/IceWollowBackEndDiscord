@@ -57,9 +57,10 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\resources" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\HibernateShared\src\main\resources" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\IceWollowServer\src\main\resources" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\Channel\src\main\java\channel" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="websocketserver.handlers" />
@@ -68,10 +69,9 @@
       <recent name="hibernate" />
       <recent name="server.factories" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\resources" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\IceWollowServer\src\main\resources" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\Channel\src\main\java\channel" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\HibernateShared\src\main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ServerSocketApplication">
@@ -145,6 +145,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.ServerContainerIntergrationTest" />
+      <item itemvalue="JUnit.ServerContainerIntergrationTest.testAddServer" />
+      <item itemvalue="Spring Boot.ServerApplication" />
+      <item itemvalue="Spring Boot.ServerSocketApplication" />
+      <item itemvalue="Spring Boot.UserApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ServerSocketApplication" />
@@ -200,6 +207,8 @@
       <workItem from="1588163656955" duration="9144000" />
       <workItem from="1588242949774" duration="5369000" />
       <workItem from="1588330937209" duration="2268000" />
+      <workItem from="1588341901857" duration="649000" />
+      <workItem from="1588342730605" duration="3647000" />
     </task>
     <servers />
   </component>
@@ -239,10 +248,10 @@
     </state>
     <state width="592" height="356" key="DebuggerActiveHint/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588172394332" />
     <state width="454" height="466" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1588093610650" />
-    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1588167746279">
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1588342016345">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588167746279" />
+    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588342016345" />
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1588074830923" />
     <state width="1877" height="328" key="GridCell.Tab.0.bottom" timestamp="1588333231623">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -321,10 +330,10 @@
     </state>
     <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588163663449" />
     <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587377092188" />
-    <state x="342" y="235" key="new project wizard" timestamp="1588332486543">
+    <state x="342" y="235" key="new project wizard" timestamp="1588342017250">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="342" y="235" key="new project wizard/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588332486543" />
+    <state x="342" y="235" key="new project wizard/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588342017250" />
     <state x="342" y="235" key="new project wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1587377154067" />
     <state x="666" y="168" key="refactoring.ChangeSignatureDialog" timestamp="1588176753131">
       <screen x="0" y="0" width="1920" height="1080" />

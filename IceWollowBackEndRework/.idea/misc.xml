@@ -5,14 +5,12 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/ChatLogic/pom.xml" />
+        <option value="$PROJECT_DIR$/UserComponent/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/Channel/pom.xml" />
-        <option value="$PROJECT_DIR$/Hibernate/pom.xml" />
-        <option value="$PROJECT_DIR$/HibernateShared/pom.xml" />
+        <option value="$PROJECT_DIR$/UserService/pom.xml" />
       </set>
     </option>
   </component>

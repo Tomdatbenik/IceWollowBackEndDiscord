@@ -1,9 +1,0 @@
-language: java
-sudo: false
-addons:
- sonarcloud:
-   organization: "tomdatbenik"
-script: 
-  - cd IceWollowBackEnd
-  - mvn clean verify
-  - mvn clean install sonar:sonar -Pcoverage -Dsonar.projectKey=tomdatbenik
