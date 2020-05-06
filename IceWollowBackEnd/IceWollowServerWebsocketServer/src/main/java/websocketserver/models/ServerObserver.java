@@ -1,8 +1,6 @@
 package websocketserver.models;
 
 import com.google.gson.Gson;
-import serverlogic.models.IWServer;
-import serverlogic.models.VoiceChannel;
 import websocketserver.messages.BaseMessage;
 
 public class ServerObserver {

@@ -5,7 +5,6 @@ import org.eclipse.jetty.websocket.api.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import settlementcomponent.Application;
 import websocketserver.factory.InstanceFactory;
 import websocketserver.interfaces.IHandler;
 import websocketserver.managers.ServerManager;
@@ -33,8 +32,6 @@ public class ServerService {
 
     @PostConstruct
     private void init() {
-        Application.setUpProperties();
-
         //scheduledClientManagerExecutor = Executors.newScheduledThreadPool(20);
     }
 
@@ -42,24 +39,19 @@ public class ServerService {
     public void handleMessage(String sMessage, Session session) {
         BaseMessage message = gson.fromJson(sMessage, BaseMessage.class);
 
-        try{
+        try {
             Class Clazz = Class.forName("websocketserver.handlers." + message.getHandler());
 
             InstanceFactory<IHandler> factory = new InstanceFactory<>();
 
             IHandler handler = factory.Create(Clazz);
 
-            if(handler != null)
-            {
-                handler.Handle(gson.fromJson(sMessage,handler.getEmptyMessageObject().getClass()),session);
-            }
-            else
-            {
+            if (handler != null) {
+                handler.Handle(gson.fromJson(sMessage, handler.getEmptyMessageObject().getClass()), session);
+            } else {
                 logger.error("Handler cannot be created.");
             }
-        }
-        catch (ClassNotFoundException ex)
-        {
+        } catch (ClassNotFoundException ex) {
             logger.error(ex.getMessage());
         }
     }

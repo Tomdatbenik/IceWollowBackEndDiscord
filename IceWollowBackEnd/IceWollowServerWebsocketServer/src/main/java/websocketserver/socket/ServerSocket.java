@@ -7,7 +7,6 @@ import org.eclipse.jetty.websocket.api.annotations.OnWebSocketMessage;
 import org.eclipse.jetty.websocket.api.annotations.WebSocket;
 import websocketserver.util.ServerBeanUtil;
 
-
 @WebSocket(maxIdleTime = 90000000)
 public class ServerSocket {
 
