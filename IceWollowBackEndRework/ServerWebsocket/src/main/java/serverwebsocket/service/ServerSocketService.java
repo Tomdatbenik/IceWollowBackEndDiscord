@@ -7,21 +7,24 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import servercomponent.service.ServerService;
+
 import serverwebsocket.factory.InstanceFactory;
 import serverwebsocket.interfaces.IHandler;
 import serverwebsocket.managers.ServerManager;
 import serverwebsocket.messages.BaseMessage;
 import serverwebsocket.models.Client;
+import servercomponent.service.ServerService;
 
 
 import javax.annotation.PostConstruct;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 
 @Service("serverSvc")
 @AllArgsConstructor
 public class ServerSocketService {
 
-    // private ScheduledExecutorService scheduledClientManagerExecutor;
+//    private ScheduledExecutorService scheduledClientManagerExecutor;
     private Gson gson = new Gson();
 
     @Autowired
@@ -39,7 +42,7 @@ public class ServerSocketService {
 
     @PostConstruct
     private void init() {
-        //scheduledClientManagerExecutor = Executors.newScheduledThreadPool(20);
+//        scheduledClientManagerExecutor = Executors.newScheduledThreadPool(20);
     }
 
     //TODO create helloworld handler from message
@@ -48,10 +51,10 @@ public class ServerSocketService {
         BaseMessage message = gson.fromJson(sMessage, BaseMessage.class);
 
         try{
-            Class Clazz = Class.forName("websocketserver.handlers." + message.getHandler());
+            Class Clazz = Class.forName("serverwebsocket.handlers." + message.getHandler());
 
             InstanceFactory<IHandler> factory = new InstanceFactory<>();
-
+            logger.info("Handler is: " + Clazz.getName());
             IHandler handler = factory.Create(Clazz);
 
             if(handler != null)

@@ -6,20 +6,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import servercomponent.models.Channel;
-import servercomponent.models.IWServer;
-import servercomponent.models.VoiceChannel;
-import servercomponent.service.ServerService;
+
 import serverwebsocket.messages.BaseMessage;
 import serverwebsocket.models.Client;
 import serverwebsocket.models.ServerObserver;
-import usercomponent.models.User;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.Collectors;
-
+import usercomponent.models.User;
+import servercomponent.models.Channel;
+import servercomponent.models.IWServer;
+import servercomponent.models.VoiceChannel;
+import servercomponent.service.ServerService;
 
 @Component
 @AllArgsConstructor

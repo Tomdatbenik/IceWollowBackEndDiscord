@@ -32,6 +32,7 @@ public class ServerContainerController {
 
         User user = userService.getUserByEmail(iwServer.getOwner().getEmail());
         iwServer.setOwner(user);
+        iwServer.getUsers().add(user);
 
         return new ServerDTO(serverService.addServer(iwServer));
     }

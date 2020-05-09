@@ -45,7 +45,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/User/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Semester_3/Github_Projects/IceWollowTowns/IceWollowTownsAPI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -57,10 +57,9 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\resources" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\IceWollowServer\src\main\resources" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\Channel\src\main\java\channel" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\HibernateShared\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="websocketserver.handlers" />
@@ -69,9 +68,10 @@
       <recent name="hibernate" />
       <recent name="server.factories" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\User\src\main\resources" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\HibernateShared\src\main\resources" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\IceWollowServer\src\main\resources" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\Channel\src\main\java\channel" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ServerSocketApplication">
@@ -213,6 +213,9 @@
       <workItem from="1588425004276" duration="790000" />
       <workItem from="1588519663580" duration="599000" />
       <workItem from="1588521107469" duration="1194000" />
+      <workItem from="1589025664380" duration="2546000" />
+      <workItem from="1589029517290" duration="2472000" />
+      <workItem from="1589045981846" duration="35000" />
     </task>
     <servers />
   </component>
@@ -253,11 +256,11 @@
     </state>
     <state width="592" height="356" key="DebuggerActiveHint/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588172394332" />
     <state width="454" height="466" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1588093610650" />
-    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1588522349936">
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1589035130706">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1588522349936" />
-    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1588074830923" />
+    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1589035130706" />
     <state width="1877" height="328" key="GridCell.Tab.0.bottom" timestamp="1588333231623">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

@@ -1,7 +1,9 @@
 package serverwebsocket.handlers;
 
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.eclipse.jetty.websocket.api.Session;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import servercomponent.service.ServerService;
 import serverwebsocket.interfaces.IHandler;
@@ -16,8 +18,8 @@ import usercomponent.service.UserService;
 @AllArgsConstructor
 public class SubscribeChannelHandler implements IHandler<ChannelMessage> {
 
-    private final UserService userContainerLogic;
-    private final ServerService serverService;
+    private UserService userContainerLogic;
+    private ServerService serverService;
 
     @Override
     public ChannelMessage getEmptyMessageObject() {

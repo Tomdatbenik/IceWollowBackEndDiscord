@@ -5,7 +5,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import serverwebsocket.service.ServerSocketService;
 
-;
 
 public class ServerBeanUtil implements ApplicationContextAware {
     private static ApplicationContext appCxt;

@@ -7,14 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="UserLogic" />
+        <module name="ChatLogic" />
         <module name="HibernateShared" />
-        <module name="Hibernate" />
         <module name="IceWollowServerWebsocketServer" />
         <module name="Chat" />
         <module name="ServerLogic" />
         <module name="UserView" />
         <module name="IceWollowServerView" />
-        <module name="ChatLogic" />
+        <module name="Hibernate" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

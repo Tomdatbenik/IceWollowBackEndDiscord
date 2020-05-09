@@ -2,26 +2,27 @@ package serverwebsocket.factory;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.stereotype.Component;
 
 import java.lang.reflect.InvocationTargetException;
+import java.sql.DriverManager;
 
-public class InstanceFactory<T> {
+@Component
+public class InstanceFactory<T> implements ApplicationContextAware {
 
     private final Logger logger = LoggerFactory.getLogger(InstanceFactory.class);
 
-    public T Create(Class<T> aClass){
-        try {
-            return aClass.getDeclaredConstructor().newInstance();
-        } catch (InstantiationException e) {
-            logger.error(e.getMessage());
-        } catch (IllegalAccessException e) {
-            logger.error(e.getMessage());
-        } catch (InvocationTargetException e) {
-            logger.error(e.getMessage());
-        } catch (NoSuchMethodException e) {
-            logger.error(e.getMessage());
-        }
+    private static ApplicationContext context;
 
-        return null;
-    };
+    public T Create(Class<T> aClass) {
+        return context.getBean(aClass.getSimpleName(), aClass);
+    }
+
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        context = applicationContext;
+    }
 }
