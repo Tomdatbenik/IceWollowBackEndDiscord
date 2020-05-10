@@ -14,6 +14,9 @@ import usercomponent.models.User;
 import usercomponent.service.UserService;
 import servercomponent.service.ServerService;
 
+import javax.annotation.PostConstruct;
+import java.util.List;
+
 @Service("SubscribeServerHandler")
 @AllArgsConstructor
 public class SubscribeServerHandler implements IHandler<ServerMessage> {

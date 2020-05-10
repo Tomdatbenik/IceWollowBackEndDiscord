@@ -20,9 +20,6 @@ public class UserService {
     }
 
     public User getUserById(int id) {
-
-        List<User> userList = repo.findAll();
-
         return repo.findById(id).orElse(null );
     }
 

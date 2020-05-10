@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import serverwebsocket.factory.InstanceFactory;
+import serverwebsocket.factory.GetBeanInstanceFactory;
 import serverwebsocket.interfaces.IHandler;
 import serverwebsocket.managers.ServerManager;
 import serverwebsocket.messages.BaseMessage;
@@ -17,8 +17,6 @@ import servercomponent.service.ServerService;
 
 
 import javax.annotation.PostConstruct;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 
 @Service("serverSvc")
 @AllArgsConstructor
@@ -53,7 +51,7 @@ public class ServerSocketService {
         try{
             Class Clazz = Class.forName("serverwebsocket.handlers." + message.getHandler());
 
-            InstanceFactory<IHandler> factory = new InstanceFactory<>();
+            GetBeanInstanceFactory<IHandler> factory = new GetBeanInstanceFactory<>();
             logger.info("Handler is: " + Clazz.getName());
             IHandler handler = factory.Create(Clazz);
 

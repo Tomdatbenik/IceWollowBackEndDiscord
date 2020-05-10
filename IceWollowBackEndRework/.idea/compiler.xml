@@ -7,10 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ServerWebsocket" />
+        <module name="ServerComponent" />
         <module name="ChatComponent" />
         <module name="UserComponent" />
-        <module name="ServerComponent" />
+        <module name="ServerWebsocket" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -7,13 +7,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
-import java.lang.reflect.InvocationTargetException;
-import java.sql.DriverManager;
-
 @Component
-public class InstanceFactory<T> implements ApplicationContextAware {
+public class GetBeanInstanceFactory<T> implements ApplicationContextAware {
 
-    private final Logger logger = LoggerFactory.getLogger(InstanceFactory.class);
+    private final Logger logger = LoggerFactory.getLogger(GetBeanInstanceFactory.class);
 
     private static ApplicationContext context;
 

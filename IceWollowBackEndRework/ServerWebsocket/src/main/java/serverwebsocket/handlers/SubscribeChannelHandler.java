@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import org.eclipse.jetty.websocket.api.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import servercomponent.service.ServerService;
 import serverwebsocket.interfaces.IHandler;
 import serverwebsocket.managers.ServerManager;
@@ -13,8 +14,7 @@ import serverwebsocket.models.Client;
 import usercomponent.models.User;
 import usercomponent.service.UserService;
 
-
-@Component
+@Service("SubscribeChannelHandler")
 @AllArgsConstructor
 public class SubscribeChannelHandler implements IHandler<ChannelMessage> {
 
