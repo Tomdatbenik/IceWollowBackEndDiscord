@@ -1,0 +1,16 @@
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\ServerApplication.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\models\VoiceChannel.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\service\ChannelService.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\service\ServerService.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\dal\IVoiceChannelRepo.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\models\dtomodels\ChannelDTO.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\controllers\ChannelController.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\dal\IServerRepo.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\models\dtomodels\ChannelType.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\controllers\ServerContainerController.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\controllers\ServerController.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\models\dtomodels\ServerDTO.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\models\IWServer.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\models\TextChannel.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\dal\ITextChannelRepo.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEndRework\ServerComponent\src\main\java\servercomponent\models\Channel.java

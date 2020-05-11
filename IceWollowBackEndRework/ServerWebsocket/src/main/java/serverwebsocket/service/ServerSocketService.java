@@ -8,12 +8,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import servercomponent.service.ServerService;
 import serverwebsocket.factory.GetBeanInstanceFactory;
 import serverwebsocket.interfaces.IHandler;
 import serverwebsocket.managers.ServerManager;
 import serverwebsocket.messages.BaseMessage;
 import serverwebsocket.models.Client;
-import servercomponent.service.ServerService;
 
 
 import javax.annotation.PostConstruct;
