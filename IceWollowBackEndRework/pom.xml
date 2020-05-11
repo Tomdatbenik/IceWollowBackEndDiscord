@@ -13,7 +13,6 @@
         <module>ServerComponent</module>
         <module>ChatComponent</module>
         <module>ServerWebsocket</module>
-        <module>WebsocketServer</module>
     </modules>
 
     <parent>
