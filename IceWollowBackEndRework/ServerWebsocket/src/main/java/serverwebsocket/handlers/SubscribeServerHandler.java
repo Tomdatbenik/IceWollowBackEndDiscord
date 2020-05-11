@@ -1,21 +1,15 @@
 package serverwebsocket.handlers;
 
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.eclipse.jetty.websocket.api.Session;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import servercomponent.service.ServerService;
 import serverwebsocket.interfaces.IHandler;
 import serverwebsocket.managers.ServerManager;
 import serverwebsocket.messages.ServerMessage;
 import serverwebsocket.models.Client;
 import usercomponent.models.User;
 import usercomponent.service.UserService;
-import servercomponent.service.ServerService;
-
-import javax.annotation.PostConstruct;
-import java.util.List;
 
 @Service("SubscribeServerHandler")
 @AllArgsConstructor

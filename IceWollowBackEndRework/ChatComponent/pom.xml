@@ -10,7 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ChatComponent</artifactId>
+
+    <properties>
+        <java.version>11</java.version>
+    </properties>
+
     <dependencies>
+
         <dependency>
             <groupId>org.IceWollow</groupId>
             <artifactId>UserComponent</artifactId>

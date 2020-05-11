@@ -1,0 +1,6 @@
+usercomponent\dal\IUserRepo.class
+usercomponent\controllers\UserController.class
+usercomponent\UserApplication.class
+usercomponent\models\User.class
+usercomponent\datamodels\UserDataModel.class
+usercomponent\service\UserService.class
