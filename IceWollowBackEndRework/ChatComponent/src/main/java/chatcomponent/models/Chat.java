@@ -1,9 +1,11 @@
 package chatcomponent.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
-import usercomponent.models.User;
+import usercomponent.models.*;
 
 
 import javax.persistence.*;
@@ -11,6 +13,8 @@ import java.util.List;
 
 @Entity
 @Table(name = "Chat")
+@Getter
+@Setter
 public class Chat {
     @GeneratedValue
     @Id
