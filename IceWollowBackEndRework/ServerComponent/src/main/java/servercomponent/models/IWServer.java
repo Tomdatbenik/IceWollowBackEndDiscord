@@ -22,6 +22,10 @@ public class IWServer {
     @Column(name = "name")
     private String name;
 
+    @JsonProperty("code")
+    @Column(name = "code")
+    private String code;
+
     @JsonProperty("users")
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     @ManyToMany

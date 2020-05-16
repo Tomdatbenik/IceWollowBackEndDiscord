@@ -5,6 +5,7 @@ import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 import usercomponent.models.User;
 
+
 import javax.persistence.*;
 import java.util.List;
 
