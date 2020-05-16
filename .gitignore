@@ -24,3 +24,5 @@
 hs_err_pid*
 IceWollowBackEndRework/.idea/workspace.xml
 *.properties
+IceWollowBackEndRework/ServerComponent/src/main/resources/application.properties
+*.properties
