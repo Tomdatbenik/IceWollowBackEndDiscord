@@ -15,4 +15,6 @@ public interface IServerRepo extends JpaRepository<IWServer, String> {
     void update(@Param("newServer") IWServer server);
 
     IWServer findById(int server_id);
+
+    IWServer getServerByCode(String code);
 }

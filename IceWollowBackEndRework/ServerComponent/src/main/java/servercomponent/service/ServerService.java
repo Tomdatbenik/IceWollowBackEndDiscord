@@ -10,6 +10,7 @@ import usercomponent.models.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Component
 @AllArgsConstructor
@@ -28,6 +29,8 @@ public class ServerService {
     public IWServer addServer(IWServer iwServer) {
         iwServer.getTextChannels().add(new TextChannel("General"));
         iwServer.getVoiceChannels().add(new VoiceChannel("General"));
+        UUID uuid = UUID.randomUUID();
+        iwServer.setCode(uuid.toString());
 
         return repo.save(iwServer);
     }
@@ -46,5 +49,10 @@ public class ServerService {
         });
 
         return servers;
+    }
+
+    public IWServer getServerByCode(String code)
+    {
+        return repo.getServerByCode(code);
     }
 }

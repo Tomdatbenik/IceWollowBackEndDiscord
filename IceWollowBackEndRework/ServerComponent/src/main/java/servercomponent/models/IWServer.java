@@ -1,6 +1,9 @@
 package servercomponent.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 import usercomponent.models.User;
@@ -11,6 +14,8 @@ import java.util.List;
 
 @Entity
 @Table(name = "Server")
+@Getter
+@Setter
 public class IWServer {
     @GeneratedValue
     @Id
@@ -23,7 +28,7 @@ public class IWServer {
     private String name;
 
     @JsonProperty("code")
-    @Column(name = "code")
+    @Column(name = "code", unique = true)
     private String code;
 
     @JsonProperty("users")
@@ -32,13 +37,13 @@ public class IWServer {
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<User> users = new ArrayList<>();
 
-    @JsonProperty("channels")
+    @JsonProperty("voiceChannels")
     @OneToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "server_voice_channels", joinColumns = @JoinColumn(name = "voice_channels"), inverseJoinColumns = @JoinColumn(name = "id"))
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<VoiceChannel> voiceChannels = new ArrayList<>();
 
-    @JsonProperty("channels")
+    @JsonProperty("textChannels")
     @OneToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "server_text_channels", joinColumns = @JoinColumn(name = "text_channels"), inverseJoinColumns = @JoinColumn(name = "id"))
     @LazyCollection(LazyCollectionOption.FALSE)
@@ -48,38 +53,6 @@ public class IWServer {
     @JoinColumn(name= "Owner", referencedColumnName = "id")
     @ManyToOne
     private User owner;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(List<User> users) {
-        this.users = users;
-    }
-
-    public User getOwner() {
-        return owner;
-    }
-
-    public void setOwner(User owner) {
-        this.owner = owner;
-    }
 
     public List<Channel> getChannels() {
 
