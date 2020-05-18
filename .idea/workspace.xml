@@ -24,7 +24,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/WebSocketModule/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/WebSocketModule/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -42,9 +42,9 @@
       <recent name="restmodule" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\resources" />
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\WebSocketModule\src\main\java" />
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\WebSocketModule\src\main\resources" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\resources" />
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\service" />
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\models" />
     </key>
@@ -98,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589796488627</updated>
-      <workItem from="1589796491418" duration="3856000" />
+      <workItem from="1589796491418" duration="4010000" />
     </task>
     <servers />
   </component>
@@ -110,6 +110,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="198" key="#Project_Structure/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589803316489" />
+    <state x="664" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589805147121">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="664" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589805147121" />
     <state width="1877" height="429" key="GridCell.Tab.0.bottom" timestamp="1589805058140">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
