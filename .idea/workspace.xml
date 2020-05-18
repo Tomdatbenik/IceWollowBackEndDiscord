@@ -17,10 +17,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/RestModule/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/WebSocketModule/src/main/java" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -33,18 +37,19 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="restmodule.config" />
       <recent name="restmodule.models" />
       <recent name="restmodule" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\WebSocketModule\src\main\java" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\WebSocketModule\src\main\resources" />
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\resources" />
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\service" />
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\models" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\dal" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\controllers" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.RestApplication">
     <configuration name="RestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="RestModule" />
       <extension name="coverage">
@@ -54,6 +59,13 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="restmodule.RestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerWebsocketApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="WebSocketModule" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="serverwebsocket.ServerWebsocketApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -86,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589796488627</updated>
-      <workItem from="1589796491418" duration="2462000" />
+      <workItem from="1589796491418" duration="3856000" />
     </task>
     <servers />
   </component>
@@ -98,6 +110,38 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="198" key="#Project_Structure/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589803316489" />
+    <state width="1877" height="429" key="GridCell.Tab.0.bottom" timestamp="1589805058140">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="429" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589805058140" />
+    <state width="1877" height="429" key="GridCell.Tab.0.center" timestamp="1589805058140">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="429" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589805058140" />
+    <state width="1877" height="429" key="GridCell.Tab.0.left" timestamp="1589805058140">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="429" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589805058140" />
+    <state width="1877" height="429" key="GridCell.Tab.0.right" timestamp="1589805058140">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="429" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589805058140" />
+    <state width="1877" height="429" key="GridCell.Tab.1.bottom" timestamp="1589805058140">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="429" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589805058140" />
+    <state width="1877" height="429" key="GridCell.Tab.1.center" timestamp="1589805058140">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="429" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589805058140" />
+    <state width="1877" height="429" key="GridCell.Tab.1.left" timestamp="1589805058140">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="429" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589805058140" />
+    <state width="1877" height="429" key="GridCell.Tab.1.right" timestamp="1589805058140">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="429" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589805058140" />
     <state x="342" y="235" key="new project wizard" timestamp="1589796541164">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
