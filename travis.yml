@@ -1,0 +1,8 @@
+language: java
+sudo: false
+addons:
+ sonarcloud:
+   organization: "tomdatbenik"
+script: 
+  - mvn clean verify
+  - mvn clean install sonar:sonar -Pcoverage -Dsonar.projectKey=tomdatbenik
