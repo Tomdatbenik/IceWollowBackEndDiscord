@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import restmodule.models.IWServer;
 import restmodule.models.User;
+import restmodule.models.dtomodels.JoinServerDto;
 import restmodule.models.dtomodels.ServerDTO;
 import restmodule.service.ServerService;
 import restmodule.service.UserService;
@@ -55,6 +56,7 @@ public class ServerController {
         return new ResponseEntity(servers,HttpStatus.OK);
     }
 
+    @CrossOrigin("*")
     @GetMapping(value = "/invitecode")
     public ResponseEntity getInviteCode(int server_id)
     {
@@ -70,21 +72,29 @@ public class ServerController {
     }
 
     @PutMapping(value = "/join")
-    public ResponseEntity joinServer(@RequestBody User user, String inviteCode)
+    public ResponseEntity joinServer(@RequestBody JoinServerDto joinServer)
     {
-        IWServer joinServer = serverService.getServerByCode(inviteCode);
+        IWServer server = serverService.getServerByCode(joinServer.getCode());
 
-        if(joinServer == null)
+        if(server == null)
         {
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
-        else if(user.getId() == 0)
+        else if(joinServer.getUser().getId() == 0)
         {
-            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
         else
         {
-            joinServer.getUsers().add(user);
+            if(server.getUsers().stream().filter(u->u.getId() == joinServer.getUser().getId()).findAny().orElse(null) != null)
+            {
+                return new ResponseEntity(HttpStatus.UNPROCESSABLE_ENTITY);
+            }
+
+            server.getUsers().add(joinServer.getUser());
+
+            serverService.updateServer(server);
+
             return new ResponseEntity(HttpStatus.OK);
         }
     }

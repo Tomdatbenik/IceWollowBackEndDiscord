@@ -23,7 +23,7 @@ public class ServerService {
     }
 
     public void updateServer(IWServer server) {
-        repo.saveAndFlush(server);
+        repo.save(server);
     }
 
     public IWServer addServer(IWServer iwServer) {
