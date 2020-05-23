@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ServerWebsocket" />
+        <module name="ChatComponent" />
+        <module name="UserComponent" />
+        <module name="ServerComponent" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ChatComponent" target="11" />
+      <module name="IceWollowBackEndRework" target="11" />
+      <module name="ServerComponent" target="11" />
+      <module name="ServerWebsocket" target="11" />
+      <module name="UserComponent" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ChatComponent" options="-parameters" />
+      <module name="ServerComponent" options="-parameters" />
+      <module name="ServerWebsocket" options="-parameters" />
+      <module name="UserComponent" options="-parameters" />
+    </option>
+  </component>
+</project>

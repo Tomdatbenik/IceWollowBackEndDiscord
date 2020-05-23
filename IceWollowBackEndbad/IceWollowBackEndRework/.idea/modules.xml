@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ChatComponent/ChatComponent.iml" filepath="$PROJECT_DIR$/ChatComponent/ChatComponent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/IceWollowBackEndRework.iml" filepath="$PROJECT_DIR$/.idea/IceWollowBackEndRework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServerComponent/ServerComponent.iml" filepath="$PROJECT_DIR$/ServerComponent/ServerComponent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServerWebsocket/ServerWebsocket.iml" filepath="$PROJECT_DIR$/ServerWebsocket/ServerWebsocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UserComponent/UserComponent.iml" filepath="$PROJECT_DIR$/UserComponent/UserComponent.iml" />
+    </modules>
+  </component>
+</project>
