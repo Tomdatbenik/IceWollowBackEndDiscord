@@ -4,6 +4,7 @@ restmodule\controllers\ChannelController.class
 restmodule\controllers\ServerController.class
 restmodule\dal\IUserRepo.class
 restmodule\dal\ITextChannelRepo.class
+restmodule\models\dtomodels\JoinServerDto.class
 restmodule\service\ServerService.class
 restmodule\RestApplication.class
 restmodule\models\dtomodels\ChannelType.class
