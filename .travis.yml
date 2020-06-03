@@ -6,10 +6,17 @@ jdk:
 env:
   - MAVEN_VERSION=4.0.0
 
+services:
+ - docker
+
 addons:
  sonarcloud:
    organization: "tomdatbenik"
 
 script: 
-  - mvn clean verify
   - mvn clean install sonar:sonar -Pcoverage -Dsonar.projectKey=tomdatbenik
+  - cd $TRAVIS_BUILD_DIR/RestModule
+  - docker build -t docker.io/$DOCKER_NAME/icewollowDiscord-RestModule:latest .
+
+  - cd $TRAVIS_BUILD_DIR/WebSocketModule
+  - docker build -t docker.io/$DOCKER_NAME/icewollowDiscord-WebSocketModule:latest .
