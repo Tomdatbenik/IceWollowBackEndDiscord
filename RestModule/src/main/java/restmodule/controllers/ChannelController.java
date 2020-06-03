@@ -16,7 +16,7 @@ import restmodule.models.dtomodels.ChannelType;
 import restmodule.service.ChannelService;
 import restmodule.service.ServerService;
 
-@CrossOrigin
+@CrossOrigin(origins = {"*"})
 @RestController
 @AllArgsConstructor
 @RequestMapping(path = "channel", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -27,6 +27,7 @@ public class ChannelController {
 
     private Gson gson = new Gson();
 
+    @CrossOrigin(origins = {"*"})
     @PostMapping(value = "/add")
     public ChannelDTO addChannel(int server_id, String channel) {
         ChannelDTO channelDTO = gson.fromJson(channel, ChannelDTO.class);

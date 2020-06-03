@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: restmodule.service.UserServiceTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.411 s <<< FAILURE! - in restmodule.service.UserServiceTests
+addUserTest  Time elapsed: 1.343 s  <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+could not execute statement; SQL [n/a]; constraint ["PRIMARY KEY ON PUBLIC.user(id) [1, 'test user', 'test@test.com']"; SQL statement:
+insert into user (display_name, email, id) values (?, ?, ?) [23505-199]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at restmodule.service.UserServiceTests.addUserTest(UserServiceTests.java:39)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at restmodule.service.UserServiceTests.addUserTest(UserServiceTests.java:39)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: 
+Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.user(id) [1, 'test user', 'test@test.com']"; SQL statement:
+insert into user (display_name, email, id) values (?, ?, ?) [23505-199]
+	at restmodule.service.UserServiceTests.addUserTest(UserServiceTests.java:39)
+

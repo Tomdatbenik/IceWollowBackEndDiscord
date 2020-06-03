@@ -1,8 +1,15 @@
 language: java
-sudo: false
+
+jdk:
+  - oraclejdk11
+
+env:
+  - MAVEN_VERSION=4.0.0
+
 addons:
  sonarcloud:
    organization: "tomdatbenik"
+
 script: 
   - mvn clean verify
   - mvn clean install sonar:sonar -Pcoverage -Dsonar.projectKey=tomdatbenik

@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: restmodule.repo.UserRepoTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.449 s <<< FAILURE! - in restmodule.repo.UserRepoTest
+getServerWithSearchCode  Time elapsed: 1.383 s  <<< ERROR!
+java.lang.NullPointerException
+	at restmodule.repo.UserRepoTest.getServerWithSearchCode(UserRepoTest.java:29)
+

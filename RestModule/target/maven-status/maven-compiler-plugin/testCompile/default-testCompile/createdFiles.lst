@@ -1,0 +1,4 @@
+restmodule\repo\UserRepoTest.class
+restmodule\RestModuleApplicationTests.class
+restmodule\service\UserServiceTests.class
+restmodule\repo\ServerRepoTest.class

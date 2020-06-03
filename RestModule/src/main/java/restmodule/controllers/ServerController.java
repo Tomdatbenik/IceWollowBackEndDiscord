@@ -16,7 +16,6 @@ import restmodule.service.UserService;
 import java.util.ArrayList;
 import java.util.List;
 
-@CrossOrigin
 @RestController
 @AllArgsConstructor
 @RequestMapping(path= "server", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -27,6 +26,8 @@ public class ServerController {
     UserService userService;
 
     private Gson gson = new Gson();
+
+    @CrossOrigin(origins = {"*"})
     @PostMapping(value = "/add")
     public ResponseEntity<ServerDTO> addServer(String server)
     {
@@ -41,6 +42,7 @@ public class ServerController {
         return new ResponseEntity(serverDTO, HttpStatus.OK);
     }
 
+    @CrossOrigin(origins = {"*"})
     @GetMapping(value = "/getbyuser")
     public ResponseEntity<List<ServerDTO>> getallservers(String email)
     {
@@ -56,7 +58,7 @@ public class ServerController {
         return new ResponseEntity(servers,HttpStatus.OK);
     }
 
-    @CrossOrigin("*")
+    @CrossOrigin(origins = {"*"})
     @GetMapping(value = "/invitecode")
     public ResponseEntity getInviteCode(int server_id)
     {
@@ -71,6 +73,7 @@ public class ServerController {
         return new ResponseEntity(null, HttpStatus.NOT_FOUND);
     }
 
+    @CrossOrigin(origins = {"*"})
     @PutMapping(value = "/join")
     public ResponseEntity joinServer(@RequestBody JoinServerDto joinServer)
     {

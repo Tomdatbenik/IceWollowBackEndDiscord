@@ -7,6 +7,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -31,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IceWollowBackEndBad/IceWollowBackEndRework" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Groepsproject/Github projects/Collapporation-Backend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -43,20 +57,85 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\resources" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\WebSocketModule\src\main\resources" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\WebSocketModule\src\main\java" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\service" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="restmodule.service" />
+      <recent name="restmodule.repo" />
       <recent name="restmodule.config" />
       <recent name="restmodule.models" />
       <recent name="restmodule" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\WebSocketModule\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\test\java\restmodule" />
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\resources" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\WebSocketModule\src\main\java" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\service" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\test\resources" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServerWebsocketApplication">
+  <component name="RunManager" selected="JUnit.UserServiceTests.addUserTest">
+    <configuration name="All in RestModule" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestModule" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestModuleApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestModule" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restmodule.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restmodule" />
+      <option name="MAIN_CLASS_NAME" value="restmodule.RestModuleApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTests.addUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestModule" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restmodule.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restmodule.service" />
+      <option name="MAIN_CLASS_NAME" value="restmodule.service.UserServiceTests" />
+      <option name="METHOD_NAME" value="addUserTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="restmodule in RestModule" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestModule" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restmodule.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restmodule" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RestModule" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="RestModule" />
       <extension name="coverage">
@@ -79,7 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserServiceTests.addUserTest" />
+        <item itemvalue="JUnit.All in RestModule" />
+        <item itemvalue="JUnit.restmodule in RestModule" />
         <item itemvalue="Spring Boot.RestApplication" />
+        <item itemvalue="JUnit.RestModuleApplicationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -109,6 +192,14 @@
       <workItem from="1589872332481" duration="2075000" />
       <workItem from="1589886359143" duration="1826000" />
       <workItem from="1590232296190" duration="3056000" />
+      <workItem from="1590405438576" duration="5422000" />
+      <workItem from="1590479804247" duration="2376000" />
+      <workItem from="1590564981077" duration="1616000" />
+      <workItem from="1590576243736" duration="3010000" />
+      <workItem from="1591008484885" duration="2246000" />
+      <workItem from="1591085378607" duration="620000" />
+      <workItem from="1591097822211" duration="1534000" />
+      <workItem from="1591167803128" duration="4548000" />
     </task>
     <servers />
   </component>
@@ -120,73 +211,114 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="198" key="#Project_Structure/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589803316489" />
+    <state x="552" y="198" key="#SQL_Dialects" timestamp="1590577128686">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="198" key="#SQL_Dialects/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590577128686" />
+    <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590577139589">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590577139589" />
+    <state x="92" y="92" width="1736" height="896" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1590579201234">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="92" y="92" width="1736" height="896" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590579201234" />
     <state x="664" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589805147121">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="664" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589805147121" />
-    <state width="425" height="466" key="DebuggerActiveHint" timestamp="1589808998559">
+    <state x="557" y="170" key="#restmodule_in_RestModule" timestamp="1590578441149">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="425" height="466" key="DebuggerActiveHint/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589808998559" />
-    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1590234010558">
+    <state x="557" y="170" key="#restmodule_in_RestModule/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590578441149" />
+    <state width="425" height="466" key="DebuggerActiveHint" timestamp="1590410584820">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590234010558" />
-    <state width="1877" height="307" key="GridCell.Tab.0.bottom" timestamp="1590240030186">
+    <state width="425" height="466" key="DebuggerActiveHint/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590410584820" />
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1591085398566">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="307" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590240030186" />
-    <state width="1877" height="307" key="GridCell.Tab.0.center" timestamp="1590240030186">
+    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591085398566" />
+    <state width="1877" height="545" key="GridCell.Tab.0.bottom" timestamp="1591187030463">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="307" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590240030186" />
-    <state width="1877" height="307" key="GridCell.Tab.0.left" timestamp="1590240030186">
+    <state width="1877" height="393" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590579262258" />
+    <state width="1877" height="545" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1591187030463" />
+    <state width="1877" height="545" key="GridCell.Tab.0.center" timestamp="1591187030463">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="307" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590240030186" />
-    <state width="1877" height="307" key="GridCell.Tab.0.right" timestamp="1590240030186">
+    <state width="1877" height="393" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590579262258" />
+    <state width="1877" height="545" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1591187030463" />
+    <state width="1877" height="545" key="GridCell.Tab.0.left" timestamp="1591187030463">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="307" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590240030186" />
-    <state width="1877" height="307" key="GridCell.Tab.1.bottom" timestamp="1590240030187">
+    <state width="1877" height="393" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590579262258" />
+    <state width="1877" height="545" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1591187030463" />
+    <state width="1877" height="545" key="GridCell.Tab.0.right" timestamp="1591187030463">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="307" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590240030187" />
-    <state width="1877" height="307" key="GridCell.Tab.1.center" timestamp="1590240030187">
+    <state width="1877" height="393" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590579262258" />
+    <state width="1877" height="545" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1591187030463" />
+    <state width="1877" height="545" key="GridCell.Tab.1.bottom" timestamp="1591187030463">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="307" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590240030187" />
-    <state width="1877" height="307" key="GridCell.Tab.1.left" timestamp="1590240030187">
+    <state width="1877" height="393" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590579045396" />
+    <state width="1877" height="545" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1591187030463" />
+    <state width="1877" height="545" key="GridCell.Tab.1.center" timestamp="1591187030463">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="307" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590240030187" />
-    <state width="1877" height="307" key="GridCell.Tab.1.right" timestamp="1590240030187">
+    <state width="1877" height="393" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590579045396" />
+    <state width="1877" height="545" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1591187030463" />
+    <state width="1877" height="545" key="GridCell.Tab.1.left" timestamp="1591187030463">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="307" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590240030187" />
-    <state width="1877" height="363" key="GridCell.Tab.2.bottom" timestamp="1589810457705">
+    <state width="1877" height="393" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590579045396" />
+    <state width="1877" height="545" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1591187030463" />
+    <state width="1877" height="545" key="GridCell.Tab.1.right" timestamp="1591187030463">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.2.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589810457705" />
-    <state width="1877" height="363" key="GridCell.Tab.2.center" timestamp="1589810457705">
+    <state width="1877" height="393" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590579045396" />
+    <state width="1877" height="545" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1591187030463" />
+    <state width="1877" height="363" key="GridCell.Tab.2.bottom" timestamp="1590410613873">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.2.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589810457705" />
-    <state width="1877" height="363" key="GridCell.Tab.2.left" timestamp="1589810457705">
+    <state width="1877" height="363" key="GridCell.Tab.2.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590410613873" />
+    <state width="1877" height="363" key="GridCell.Tab.2.center" timestamp="1590410613873">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.2.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589810457705" />
-    <state width="1877" height="363" key="GridCell.Tab.2.right" timestamp="1589810457705">
+    <state width="1877" height="363" key="GridCell.Tab.2.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590410613873" />
+    <state width="1877" height="363" key="GridCell.Tab.2.left" timestamp="1590410613873">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.2.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589810457705" />
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1589872457286">
+    <state width="1877" height="363" key="GridCell.Tab.2.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590410613873" />
+    <state width="1877" height="363" key="GridCell.Tab.2.right" timestamp="1590410613873">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589872457286" />
+    <state width="1877" height="363" key="GridCell.Tab.2.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590410613873" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1591167807052">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591085378820" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591167807052" />
     <state x="342" y="235" key="new project wizard" timestamp="1589796541164">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="342" y="235" key="new project wizard/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589796541164" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestModule/src/main/java/restmodule/service/ServerService.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestModule/src/test/java/restmodule/service/UserServiceTests.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

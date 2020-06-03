@@ -9,6 +9,7 @@ C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollow
 C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\models\TextChannel.java
 C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\models\VoiceChannel.java
 C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\models\dtomodels\ServerDTO.java
+C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\security\CorsConfiguration.java
 C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\service\ServerService.java
 C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\models\dtomodels\ChannelDTO.java
 C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\controllers\ServerController.java
