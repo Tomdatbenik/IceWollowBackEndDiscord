@@ -14,7 +14,7 @@ public class ServerBeanUtil implements ApplicationContextAware {
         appCxt = applicationContext;
     }
 
-    public static ServerSocketService getStockpileService() throws BeansException {
+    public static ServerSocketService getServerService() throws BeansException {
         return (ServerSocketService) appCxt.getAutowireCapableBeanFactory().getBean("serverSvc");
     }
 }

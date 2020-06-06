@@ -33,7 +33,11 @@ public class ServerSocketService {
     public void removeClient(Session session) {
         ServerManager serverManager = ServerManager.getInstance(service);
         Client client = serverManager.getObserverBySession(session).getClient();
-        serverManager.removeClient(client);
+
+        if(client != null)
+        {
+            serverManager.removeClient(client);
+        }
     }
 
     @PostConstruct
