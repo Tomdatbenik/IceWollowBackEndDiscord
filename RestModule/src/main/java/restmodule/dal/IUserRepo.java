@@ -6,6 +6,5 @@ import restmodule.models.User;
 
 @Repository
 public interface IUserRepo extends JpaRepository<User, Integer> {
-
     User getUserByEmail(String email);
 }

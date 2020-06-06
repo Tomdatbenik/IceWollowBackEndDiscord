@@ -11,11 +11,14 @@ import restmodule.models.User;
 
 import javax.transaction.Transactional;
 
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-@DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 @TestPropertySource("/applicationtest.properties")
+@Sql(scripts = "/test/userTest.sql")
+@DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 public class UserRepoTest {
 
     @Autowired
@@ -23,9 +26,12 @@ public class UserRepoTest {
 
     @Test
     @Transactional
-    void getServerWithSearchCode() {
-        User user = repo.getUserByEmail("test@test.com");
+    void getUserByEmail() {
+        User user = repo.getUserByEmail("testUser@test.com");
 
-        assertThat(user.getId()).isEqualTo(1);
+        List<User> users = repo.findAll();
+
+        assertThat(user).isNotEqualTo(null);
+        assertThat(user.getId()).isEqualTo(10);
     }
 }

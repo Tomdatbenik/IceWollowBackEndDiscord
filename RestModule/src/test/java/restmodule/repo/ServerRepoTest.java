@@ -14,7 +14,7 @@ import javax.transaction.Transactional;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-@Sql(scripts = "/tests.sql")
+@Sql(scripts = "/test/serverTest.sql")
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 @TestPropertySource("/applicationtest.properties")
 public class ServerRepoTest {

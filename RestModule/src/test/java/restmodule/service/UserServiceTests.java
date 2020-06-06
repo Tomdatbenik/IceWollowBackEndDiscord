@@ -11,10 +11,12 @@ import restmodule.models.User;
 
 import javax.transaction.Transactional;
 
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-@Sql(scripts = "/tests.sql")
+@Sql(scripts = "/test/userTest.sql")
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 @TestPropertySource("/applicationtest.properties")
 public class UserServiceTests {
@@ -28,18 +30,18 @@ public class UserServiceTests {
     @Test
     @Transactional
     void addUserTest() {
-//        User user = new User();
-//        user.setId(2);
-//        user.setEmail("Test2@test.com");
-//        user.setDisplayName("Test add user");
-//
-//        boolean adduserRestult = service.addUser(user);
-//        assertThat(adduserRestult).isEqualTo(true);
-//
-//        User resultUser = service.getUserByEmail("Test2@test.com");
-//
-//        assertThat(resultUser.getDisplayName()).isEqualTo("Test add user");
-//        assertThat(resultUser.getEmail()).isEqualTo("Test2@test.com");
-//        assertThat(resultUser.getId()).isEqualTo(2);
+        User user = new User();
+        user.setEmail("Test2@test.com");
+        user.setDisplayName("Test add user");
+
+        boolean adduserRestult = service.addUser(user);
+        assertThat(adduserRestult).isEqualTo(true);
+        List<User> users = repo.findAll();
+
+        User resultUser = service.getUserByEmail("Test2@test.com");
+
+        assertThat(resultUser.getDisplayName()).isEqualTo("Test add user");
+        assertThat(resultUser.getEmail()).isEqualTo("Test2@test.com");
+        assertThat(resultUser.getId()).isEqualTo(1);
     }
 }
