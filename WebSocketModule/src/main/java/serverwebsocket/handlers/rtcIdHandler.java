@@ -8,24 +8,23 @@ import restmodule.service.ServerService;
 import restmodule.service.UserService;
 import serverwebsocket.interfaces.IHandler;
 import serverwebsocket.managers.ServerManager;
-import serverwebsocket.messages.ChannelMessage;
-import serverwebsocket.messages.InitIdMessage;
+import serverwebsocket.messages.rtcIdMessage;
 import serverwebsocket.models.Client;
 
-@Service("InitIdHandler")
+@Service("rtcIdHandler")
 @AllArgsConstructor
-public class InitIdHandler implements IHandler<InitIdMessage> {
+public class rtcIdHandler implements IHandler<rtcIdMessage> {
 
     private UserService userContainerLogic;
     private ServerService serverService;
 
     @Override
-    public InitIdMessage getEmptyMessageObject() {
-        return new InitIdMessage();
+    public rtcIdMessage getEmptyMessageObject() {
+        return new rtcIdMessage();
     }
 
     @Override
-    public void Handle(InitIdMessage messageObject, Session session) {
+    public void Handle(rtcIdMessage messageObject, Session session) {
         ServerManager serverManager = ServerManager.getInstance(serverService);
         User user = userContainerLogic.getUserById(Integer.parseInt(messageObject.getUser_id()));
         Client client = new Client(user, session);

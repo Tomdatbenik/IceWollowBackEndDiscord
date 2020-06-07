@@ -79,6 +79,24 @@ public class ServerManager {
         cleanActiveServers();
     }
 
+    public void unsubscribeClientToChannel(Client client, int channelId) {
+        ServerObserver observer = getObserverByUserId(client.getUser().getId());
+
+        IWServer server = activeServers.stream().filter(s -> s.getChannels().stream().filter(c -> c.getId() == channelId) != null).findAny().orElse(null);
+        if (server != null) {
+            VoiceChannel channel = (VoiceChannel) server.getChannels().stream().filter(c -> c.getId() == channelId).findAny().orElse(null);
+
+            if (channel.getUsers().stream().filter(u -> u.getId() == client.getUser().getId()).findAny().orElse(null) != null) {
+                channel.getUsers().remove(client.getUser());
+                observer.setChannel(channel);
+                logger.info(client.getUser().getDisplayName() + " unsubscribed from channel: " + channel.getName());
+            }
+
+            //Makes sure that the person that left doesnt case a notification when he joins the same channel with no other users
+            updateObserversByServer(server);
+        }
+    }
+
     public void subscribeClientToChannel(Client client, int channelId) {
         ServerObserver observer = getObserverByUserId(client.getUser().getId());
 
@@ -101,8 +119,6 @@ public class ServerManager {
                 client.sendMessage(message);
                 logger.info("Send create peer message to " + client.getUser().getDisplayName());
             }
-
-
         }
     }
 
@@ -147,6 +163,7 @@ public class ServerManager {
 
                 observers.stream().forEach(o -> {
                     List<User> users = c.getUsers().stream().filter(u -> u.getId() == o.getClient().getUser().getId()).collect(Collectors.toList());
+
                     if (o.getChannel().getId() != c.getId() && users != null) {
 
                         users.stream().forEach(u -> {
@@ -191,8 +208,7 @@ public class ServerManager {
         IWServer server = getServerbyChannel(channel);
 
         server.getUsers().stream().forEach(user -> {
-            if(user.getId() != client.getUser().getId())
-            {
+            if (user.getId() != client.getUser().getId()) {
                 ServerObserver serverObserver = getObserverByUserId(user.getId());
 
                 BaseMessage message = new BaseMessage();
