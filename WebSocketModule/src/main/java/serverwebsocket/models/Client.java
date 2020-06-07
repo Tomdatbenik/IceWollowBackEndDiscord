@@ -31,6 +31,7 @@ public class Client {
 
     public void sendMessage(BaseMessage message) {
         try {
+            logger.info("Sending Message to: " + user.getDisplayName());
             session.getRemote().sendString(gson.toJson(message));
         } catch (IOException e) {
             logger.error(e.getMessage());

@@ -1,5 +1,6 @@
 package serverwebsocket.managers;
 
+import com.google.gson.JsonElement;
 import lombok.AllArgsConstructor;
 import org.eclipse.jetty.websocket.api.Session;
 import org.slf4j.Logger;
@@ -18,6 +19,7 @@ import serverwebsocket.models.ServerObserver;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
 @Component
@@ -183,6 +185,29 @@ public class ServerManager {
         });
     }
 
+    public void connectPeerInitPeer(Client client, JsonElement rtc_id) {
+        VoiceChannel channel = getChannelByClient(client);
+
+        IWServer server = getServerbyChannel(channel);
+
+        server.getUsers().stream().forEach(user -> {
+            if(user.getId() != client.getUser().getId())
+            {
+                ServerObserver serverObserver = getObserverByUserId(user.getId());
+
+                BaseMessage message = new BaseMessage();
+                message.setContent(rtc_id.toString());
+                message.setHandler("InitIdHandler");
+
+                serverObserver.getClient().sendMessage(message);
+            }
+        });
+    }
+
+    private IWServer getServerbyChannel(Channel channel) {
+        return activeServers.stream().filter(s -> s.getChannels().stream().filter(c -> c.getId() == channel.getId()) != null).findAny().orElse(null);
+    }
+
     public ServerObserver getObserverByUserId(int userId) {
         return observers.stream().filter(o -> o.getClient().getUser().getId() == userId).findAny().orElse(null);
     }
@@ -195,8 +220,23 @@ public class ServerManager {
         return observers.stream().filter(o -> o.getServer().getId() == server.getId()).collect(Collectors.toList());
     }
 
+    private VoiceChannel getChannelByClient(Client client) {
+        AtomicReference<VoiceChannel> voiceChannel = new AtomicReference<>();
+
+        activeServers.stream().forEach(server -> {
+            server.getVoiceChannels().stream().forEach(channel -> {
+                User user = channel.getUsers().stream().filter(u -> u.getId() == client.getUser().getId()).findAny().orElse(null);
+
+                if (user != null) {
+                    voiceChannel.set(channel);
+                }
+            });
+        });
+
+        return voiceChannel.get();
+    }
+
     private List<ServerObserver> getObserversByChannel(Channel channel) {
         return observers.stream().filter(o -> o.getChannel().getId() == channel.getId()).collect(Collectors.toList());
     }
-
 }

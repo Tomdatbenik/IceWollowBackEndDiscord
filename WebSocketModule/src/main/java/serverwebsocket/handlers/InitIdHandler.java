@@ -9,26 +9,27 @@ import restmodule.service.UserService;
 import serverwebsocket.interfaces.IHandler;
 import serverwebsocket.managers.ServerManager;
 import serverwebsocket.messages.ChannelMessage;
+import serverwebsocket.messages.InitIdMessage;
 import serverwebsocket.models.Client;
 
-@Service("SubscribeChannelHandler")
+@Service("InitIdHandler")
 @AllArgsConstructor
-public class InitIdHandler implements IHandler<ChannelMessage> {
+public class InitIdHandler implements IHandler<InitIdMessage> {
 
     private UserService userContainerLogic;
     private ServerService serverService;
 
     @Override
-    public ChannelMessage getEmptyMessageObject() {
-        return new ChannelMessage();
+    public InitIdMessage getEmptyMessageObject() {
+        return new InitIdMessage();
     }
 
     @Override
-    public void Handle(ChannelMessage messageObject, Session session) {
+    public void Handle(InitIdMessage messageObject, Session session) {
         ServerManager serverManager = ServerManager.getInstance(serverService);
         User user = userContainerLogic.getUserById(Integer.parseInt(messageObject.getUser_id()));
         Client client = new Client(user, session);
 
-        serverManager.subscribeClientToChannel(client, Integer.parseInt(messageObject.getChannel_id()));
+        serverManager.connectPeerInitPeer(client, messageObject.getRtc_id());
     }
 }
