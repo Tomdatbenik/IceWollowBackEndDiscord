@@ -3,7 +3,7 @@ language: java
 sudo: required
 
 jdk:
-  - oraclejdk11
+ - oraclejdk11
 
 env:
   - MAVEN_VERSION=4.0.0
@@ -11,14 +11,19 @@ env:
 services:
  - docker
 
+install:
+ - "mvn -N io.takari:maven:wrapper -Dmaven=${MAVEN_VERSION}"
+
 addons:
  sonarcloud:
    organization: "tomdatbenik"
 
 script: 
   - mvn clean install sonar:sonar -Pcoverage -Dsonar.projectKey=tomdatbenik
+  
+after_success:
   - cd $TRAVIS_BUILD_DIR/RestModule
   - docker build -t docker.io/$DOCKER_NAME/icewollowbackend-restmodule:latest .
-
+  
   - cd $TRAVIS_BUILD_DIR/WebSocketModule
   - docker build -t docker.io/$DOCKER_NAME/icewollowbackend-websocketmodule:latest .
