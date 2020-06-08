@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import restmodule.models.IWServer;
 import restmodule.models.User;
+import restmodule.models.dtomodels.AddServerDto;
 import restmodule.models.dtomodels.JoinServerDto;
 import restmodule.models.dtomodels.LeaveServerDto;
 import restmodule.models.dtomodels.ServerDTO;
@@ -30,11 +31,16 @@ public class ServerController {
 
     @CrossOrigin(origins = {"*"})
     @PostMapping(value = "/add")
-    public ResponseEntity<ServerDTO> addServer(String server)
+    public ResponseEntity<ServerDTO> addServer(@RequestBody AddServerDto server)
     {
-        IWServer iwServer = gson.fromJson(server, IWServer.class);
+        if(server.getName().length() < 5 || server.getOwner() == null || server.getOwner().getId() == 0)
+        {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
 
-        User user = userService.getUserByEmail(iwServer.getOwner().getEmail());
+        User user = userService.getUserById(server.getOwner().getId());
+        IWServer iwServer = new IWServer();
+        iwServer.setName(server.getName());
         iwServer.setOwner(user);
         iwServer.getUsers().add(user);
 
@@ -77,7 +83,36 @@ public class ServerController {
 
     @CrossOrigin(origins = {"*"})
     @PutMapping(value = "/join")
-    public ResponseEntity joinServer(@RequestBody LeaveServerDto leaveServer)
+    public ResponseEntity joinServer(@RequestBody JoinServerDto joinServerDto)
+    {
+        IWServer server = serverService.getServerByCode(joinServerDto.getCode());
+
+        if(server == null)
+        {
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
+        }
+        else if(joinServerDto.getUser().getId() == 0)
+        {
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
+        }
+        else
+        {
+            if(server.getUsers().stream().filter(u->u.getId() == joinServerDto.getUser().getId()).findAny().orElse(null) != null)
+            {
+                return new ResponseEntity(HttpStatus.UNPROCESSABLE_ENTITY);
+            }
+
+            server.getUsers().add(joinServerDto.getUser());
+
+            serverService.updateServer(server);
+
+            return new ResponseEntity(HttpStatus.OK);
+        }
+    }
+
+    @CrossOrigin(origins = {"*"})
+    @PutMapping(value = "/leave")
+    public ResponseEntity leaveServer(@RequestBody LeaveServerDto leaveServer)
     {
         IWServer server = serverService.getServerById(leaveServer.getServer_id());
 
@@ -91,41 +126,26 @@ public class ServerController {
         }
         else
         {
-            if(server.getUsers().stream().filter(u->u.getId() == leaveServer.getUser().getId()).findAny().orElse(null) != null)
+            if(server.getUsers().stream().filter(u->u.getId() == leaveServer.getUser().getId()).findAny().orElse(null) == null)
             {
                 return new ResponseEntity(HttpStatus.UNPROCESSABLE_ENTITY);
             }
 
             server.getUsers().remove(leaveServer.getUser());
 
-            serverService.updateServer(server);
-
-            return new ResponseEntity(HttpStatus.OK);
-        }
-    }
-
-    @CrossOrigin(origins = {"*"})
-    @PutMapping(value = "/leave")
-    public ResponseEntity leaveServer(@RequestBody JoinServerDto joinServer)
-    {
-        IWServer server = serverService.getServerByCode(joinServer.getCode());
-
-        if(server == null)
-        {
-            return new ResponseEntity(HttpStatus.NOT_FOUND);
-        }
-        else if(joinServer.getUser().getId() == 0)
-        {
-            return new ResponseEntity(HttpStatus.NOT_FOUND);
-        }
-        else
-        {
-            if(server.getUsers().stream().filter(u->u.getId() == joinServer.getUser().getId()).findAny().orElse(null) != null)
+            if(server.getOwner().getId() == leaveServer.getUser().getId())
             {
-                return new ResponseEntity(HttpStatus.UNPROCESSABLE_ENTITY);
-            }
+                if(server.getUsers().size() > 1)
+                {
+                    User owner = server.getUsers().stream().filter(u-> u.getId() != leaveServer.getUser().getId()).findAny().orElse(null);
+                    server.setOwner(owner);
+                }
+                else
+                {
+                    serverService.deleteServer(server);
+                }
 
-            server.getUsers().add(joinServer.getUser());
+            }
 
             serverService.updateServer(server);
 

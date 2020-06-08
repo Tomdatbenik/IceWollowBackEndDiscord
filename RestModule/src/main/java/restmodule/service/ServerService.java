@@ -55,4 +55,8 @@ public class ServerService {
     {
         return repo.getServerByCode(code);
     }
+
+    public void deleteServer(IWServer server) {
+        repo.delete(server);
+    }
 }
