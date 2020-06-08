@@ -19,7 +19,7 @@ addons:
    organization: "tomdatbenik"
 
 script: 
-  - mvn clean install sonar:sonar -Pcoverage -Dsonar.projectKey=tomdatbenik
+  - mvn clean install sonar:sonar -Pcoverage -Dsonar.projectKey=IceWollowDiscordBackEndService
 
 after_success:
   - cd $TRAVIS_BUILD_DIR/RestModule
