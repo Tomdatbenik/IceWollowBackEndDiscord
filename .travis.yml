@@ -23,8 +23,9 @@ script:
 
 after_success:
   - cd $TRAVIS_BUILD_DIR/RestModule
-  - docker build -t docker.io/$DOCKER_NAME/icewollowbackend-restmodule:latest .
+  - docker build docker.io/$DOCKER_NAME/icewollowbackend-restmodule:latest .
   - docker push tomdatbenik/icewollowbackend-restmodule:latest .
+
   - cd $TRAVIS_BUILD_DIR/WebSocketModule
-  - docker build -t docker.io/$DOCKER_NAME/icewollowbackend-websocketmodule:latest .
+  - docker build docker.io/$DOCKER_NAME/icewollowbackend-websocketmodule:latest .
   - docker push tomdatbenik/icewollowbackend-websocketmodule:latest .
