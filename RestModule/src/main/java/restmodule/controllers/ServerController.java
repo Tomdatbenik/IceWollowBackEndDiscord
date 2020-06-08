@@ -78,7 +78,7 @@ public class ServerController {
     @PutMapping(value = "/join")
     public ResponseEntity joinServer(@RequestBody LeaveServerDto leaveServer)
     {
-        IWServer server = serverService.getServerByCode(leaveServer.getCode());
+        IWServer server = serverService.getServerById(leaveServer.getServer_id());
 
         if(server == null)
         {
@@ -90,12 +90,12 @@ public class ServerController {
         }
         else
         {
-            if(server.getUsers().stream().filter(u->u.getId() == joinServer.getUser().getId()).findAny().orElse(null) != null)
+            if(server.getUsers().stream().filter(u->u.getId() == leaveServer.getUser().getId()).findAny().orElse(null) != null)
             {
                 return new ResponseEntity(HttpStatus.UNPROCESSABLE_ENTITY);
             }
 
-            server.getUsers().add(joinServer.getUser());
+            server.getUsers().remove(leaveServer.getUser());
 
             serverService.updateServer(server);
 
