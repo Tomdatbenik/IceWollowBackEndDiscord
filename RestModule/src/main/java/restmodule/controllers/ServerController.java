@@ -56,7 +56,7 @@ public class ServerController {
             servers.stream().forEach(s-> serverDTOS.add(new ServerDTO(s)));
         }
 
-        return new ResponseEntity(servers,HttpStatus.OK);
+        return new ResponseEntity(serverDTOS,HttpStatus.OK);
     }
 
     @CrossOrigin(origins = {"*"})
