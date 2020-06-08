@@ -26,5 +26,6 @@ script:
   - docker build docker.io/$DOCKER_NAME/icewollowbackend-websocketmodule:latest .
 
 after_success:
+  - docker login -u $DOCKER_NAME -p $DOCKER_PASSWORD
   - docker push tomdatbenik/icewollowbackend-restmodule:latest .
   - docker push tomdatbenik/icewollowbackend-websocketmodule:latest .
