@@ -9,13 +9,13 @@ EXPOSE 8082
 
 # The application's jar file
 # The jar file's name is the pom.xml artifactId-version.jar, if this name needs to be changed, it needs to be changed a total of 3 times in this file
-ARG JAR_FILE=target/WebSocketModule-1.0-SNAPSHOT.jar
+ARG JAR_FILE=target/WebSocketModule-2.2.2.RELEASE.jar
 
 RUN mkdir /IceWollowBackEnd
 WORKDIR /IceWollowBackEnd
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} /IceWollowBackEnd/WebSocketModule-1.0-SNAPSHOT.jar
+ADD ${JAR_FILE} /IceWollowBackEnd/WebSocketModule-2.2.2.RELEASE.jar
 
 # Run the jar file
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom","-jar","/IceWollowBackEnd/WebSocketModule-1.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom","-jar","/IceWollowBackEnd/WebSocketModule-2.2.2.RELEASE.jar"]

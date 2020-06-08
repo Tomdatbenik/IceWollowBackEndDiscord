@@ -51,12 +51,13 @@ public class ServerController {
         List<IWServer> servers =  serverService.getAllServersByUser(user);
         List<ServerDTO> serverDTOS = new ArrayList<>();
 
+        //TODO dto's dont work
         if(servers != null)
         {
             servers.stream().forEach(s-> serverDTOS.add(new ServerDTO(s)));
         }
 
-        return new ResponseEntity(serverDTOS,HttpStatus.OK);
+        return new ResponseEntity(servers,HttpStatus.OK);
     }
 
     @CrossOrigin(origins = {"*"})
