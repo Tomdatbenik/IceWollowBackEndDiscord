@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import restmodule.models.IWServer;
 import restmodule.models.User;
 import restmodule.models.dtomodels.JoinServerDto;
+import restmodule.models.dtomodels.LeaveServerDto;
 import restmodule.models.dtomodels.ServerDTO;
 import restmodule.service.ServerService;
 import restmodule.service.UserService;
@@ -75,7 +76,36 @@ public class ServerController {
 
     @CrossOrigin(origins = {"*"})
     @PutMapping(value = "/join")
-    public ResponseEntity joinServer(@RequestBody JoinServerDto joinServer)
+    public ResponseEntity joinServer(@RequestBody LeaveServerDto leaveServer)
+    {
+        IWServer server = serverService.getServerByCode(leaveServer.getCode());
+
+        if(server == null)
+        {
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
+        }
+        else if(leaveServer.getUser().getId() == 0)
+        {
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
+        }
+        else
+        {
+            if(server.getUsers().stream().filter(u->u.getId() == joinServer.getUser().getId()).findAny().orElse(null) != null)
+            {
+                return new ResponseEntity(HttpStatus.UNPROCESSABLE_ENTITY);
+            }
+
+            server.getUsers().add(joinServer.getUser());
+
+            serverService.updateServer(server);
+
+            return new ResponseEntity(HttpStatus.OK);
+        }
+    }
+
+    @CrossOrigin(origins = {"*"})
+    @PutMapping(value = "/leave")
+    public ResponseEntity leaveServer(@RequestBody JoinServerDto joinServer)
     {
         IWServer server = serverService.getServerByCode(joinServer.getCode());
 
