@@ -45,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/WebSocketModule" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -72,11 +72,11 @@
       <recent name="restmodule.repo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\resources" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\WebSocketModule" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule" />
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\resources" />
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\WebSocketModule\src\main\resources" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\WebSocketModule\src\main\java" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule\service" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RestApplication">
@@ -202,7 +202,7 @@
       <workItem from="1591167803128" duration="5508000" />
       <workItem from="1591268912966" duration="2126000" />
       <workItem from="1591448829948" duration="13678000" />
-      <workItem from="1591601793959" duration="6698000" />
+      <workItem from="1591601793959" duration="7092000" />
     </task>
     <servers />
   </component>
@@ -239,11 +239,11 @@
     </state>
     <state width="425" height="466" key="DebuggerActiveHint/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590410584820" />
     <state width="425" height="466" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1591450255338" />
-    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1591269128033">
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1591620189991">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591085398566" />
-    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1591269128033" />
+    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1591620189991" />
     <state width="1877" height="393" key="GridCell.Tab.0.bottom" timestamp="1591620026402">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
