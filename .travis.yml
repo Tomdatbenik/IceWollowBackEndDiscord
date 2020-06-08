@@ -27,5 +27,5 @@ script:
 
 after_success:
   - docker login -u $DOCKER_NAME -p $DOCKER_PASSWORD
-  - docker push docker.io/$DOCKER_NAME/icewollowbackend-restmodule:latest .
-  - docker push docker.io/$DOCKER_NAME/icewollowbackend-websocketmodule:latest .
+  - docker push docker.io/$DOCKER_NAME/icewollowbackend-restmodule:latest
+  - docker push docker.io/$DOCKER_NAME/icewollowbackend-websocketmodule:latest
