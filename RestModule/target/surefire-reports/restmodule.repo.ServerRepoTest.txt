@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: restmodule.repo.ServerRepoTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.283 s - in restmodule.repo.ServerRepoTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.167 s - in restmodule.repo.ServerRepoTest

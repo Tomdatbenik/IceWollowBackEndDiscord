@@ -18,7 +18,7 @@ addons:
 script: 
   - mvn clean install sonar:sonar -Pcoverage -Dsonar.projectKey=tomdatbenik
   - cd $TRAVIS_BUILD_DIR/RestModule
-  - docker build -t docker.io/$DOCKER_NAME/icewollowDiscord-RestModule:latest .
+  - docker build -t docker.io/$DOCKER_NAME/icewollowbackend-restmodule:latest .
 
   - cd $TRAVIS_BUILD_DIR/WebSocketModule
-  - docker build -t docker.io/$DOCKER_NAME/icewollowDiscord-WebSocketModule:latest .
+  - docker build -t docker.io/$DOCKER_NAME/icewollowbackend-websocketmodule:latest .
