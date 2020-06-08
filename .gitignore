@@ -21,4 +21,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-*.properties
+RestModule/target/classes/application.properties
+RestModule/src/main/resources/application.properties
+WebSocketModule/target/classes/application.properties
+WebSocketModule/src/main/resources/application.properties
