@@ -2,6 +2,7 @@ package serverwebsocket.managers;
 
 import com.google.gson.JsonElement;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import org.eclipse.jetty.websocket.api.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +25,7 @@ import java.util.stream.Collectors;
 
 @Component
 @AllArgsConstructor
+@Getter
 public class ServerManager {
 
     private final Logger logger = LoggerFactory.getLogger(ServerManager.class);
@@ -50,51 +52,53 @@ public class ServerManager {
 
     public void subscribeClientToServer(Client client, int serverId) {
         Client handlingClient = client;
-        boolean clientExists = observers.stream().anyMatch(o -> o.getClient().getUser().getId() == handlingClient.getUser().getId());
 
-        ServerObserver observer = new ServerObserver(client);
+        if (client != null) {
+            boolean clientExists = observers.stream().anyMatch(o -> o.getClient().getUser().getId() == handlingClient.getUser().getId());
 
-        if (clientExists) {
-            observer = observers.stream()
-                    .filter(o -> o.getClient().getUser().getId() == handlingClient.getUser().getId())
-                    .findAny().orElse(null);
-        } else {
-            observers.add(observer);
-        }
+            ServerObserver observer = new ServerObserver(client);
 
-        IWServer server = activeServers.stream().filter(s -> s.getId() == serverId).findAny().orElse(null);
+            if (clientExists) {
+                observer = observers.stream()
+                        .filter(o -> o.getClient().getUser().getId() == handlingClient.getUser().getId())
+                        .findAny().orElse(null);
+            } else {
+                observers.add(observer);
+            }
 
-        if (server != null) {
-            if(observer.getServer() == server)
-            {
-                IWServer foundServer = serverContainerLogic.getServerById(serverId);
+            IWServer server = activeServers.stream().filter(s -> s.getId() == serverId).findAny().orElse(null);
 
-                if(foundServer!= null)
-                {
-                    observer.setServer(foundServer);
+            if (server != null) {
+                if (observer.getServer() == server) {
+                    IWServer foundServer = serverContainerLogic.getServerById(serverId);
+
+                    if (foundServer != null) {
+                        observer.setServer(foundServer);
+                    }
+                } else {
+                    observer.setServer(server);
                 }
-            }
-            else
-            {
+            } else {
+                server = serverContainerLogic.getServerById(serverId);
+
                 observer.setServer(server);
+                activeServers.add(server);
             }
-        } else {
-            server = serverContainerLogic.getServerById(serverId);
 
-            observer.setServer(server);
-            activeServers.add(server);
+            logger.info(client.getUser().getDisplayName() + " Subscribed to " + server.getName());
+
+            updateObserversByServer(server);
+            cleanActiveServers();
         }
-
-        logger.info(client.getUser().getDisplayName() + " Subscribed to " + server.getName());
-
-        updateObserversByServer(server);
-        cleanActiveServers();
     }
 
     public void unsubscribeClientToChannel(Client client, int channelId) {
+        logger.info("Subscribing client to channel");
         ServerObserver observer = getObserverByUserId(client.getUser().getId());
 
         IWServer server = activeServers.stream().filter(s -> s.getChannels().stream().filter(c -> c.getId() == channelId) != null).findAny().orElse(null);
+        logger.info("Server found: " + server);
+
         if (server != null) {
             VoiceChannel channel = (VoiceChannel) server.getChannels().stream().filter(c -> c.getId() == channelId).findAny().orElse(null);
 
@@ -110,26 +114,29 @@ public class ServerManager {
     }
 
     public void subscribeClientToChannel(Client client, int channelId) {
-        ServerObserver observer = getObserverByUserId(client.getUser().getId());
+        if (client != null) {
+            ServerObserver observer = getObserverByUserId(client.getUser().getId());
 
-        IWServer server = activeServers.stream().filter(s -> s.getChannels().stream().filter(c -> c.getId() == channelId) != null).findAny().orElse(null);
-        if (server != null) {
-            VoiceChannel channel = (VoiceChannel) server.getChannels().stream().filter(c -> c.getId() == channelId).findAny().orElse(null);
+            IWServer server = activeServers.stream().filter(s -> s.getChannels().stream().filter(c -> c.getId() == channelId) != null).findAny().orElse(null);
 
-            if (channel.getUsers().stream().filter(u -> u.getId() == client.getUser().getId()).findAny().orElse(null) == null) {
-                channel.getUsers().add(client.getUser());
-                observer.setChannel(channel);
-                logger.info(client.getUser().getDisplayName() + " subscribed to channel: " + channel.getName());
-            }
+            if (server != null) {
+                VoiceChannel channel = (VoiceChannel) server.getChannels().stream().filter(c -> c.getId() == channelId).findAny().orElse(null);
 
-            //Makes sure that the person that left doesnt case a notification when he joins the same channel with no other users
-            cleanSubscribedChannels();
+                if (channel.getUsers().stream().filter(u -> u.getId() == client.getUser().getId()).findAny().orElse(null) == null) {
+                    channel.getUsers().add(client.getUser());
+                    observer.setChannel(channel);
+                    logger.info(client.getUser().getDisplayName() + " subscribed to channel: " + channel.getName());
+                }
 
-            if (channel.getUsers().size() > 1) {
-                BaseMessage message = new BaseMessage();
-                message.setHandler("CreatePeerHandlerWithInitiator");
-                client.sendMessage(message);
-                logger.info("Send create peer message to " + client.getUser().getDisplayName());
+                //Makes sure that the person that left doesnt case a notification when he joins the same channel with no other users
+                cleanSubscribedChannels();
+
+                if (channel.getUsers().size() > 1) {
+                    BaseMessage message = new BaseMessage();
+                    message.setHandler("CreatePeerHandlerWithInitiator");
+                    client.sendMessage(message);
+                    logger.info("Send create peer message to " + client.getUser().getDisplayName());
+                }
             }
         }
     }
@@ -176,8 +183,7 @@ public class ServerManager {
                 observers.stream().forEach(o -> {
                     List<User> users = c.getUsers().stream().filter(u -> u.getId() == o.getClient().getUser().getId()).collect(Collectors.toList());
 
-                    if(o.getChannel() != null)
-                    {
+                    if (o.getChannel() != null) {
                         if (o.getChannel().getId() != c.getId() && users != null) {
 
                             users.stream().forEach(u -> {
