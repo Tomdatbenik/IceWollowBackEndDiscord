@@ -1,13 +1,16 @@
 package restmodule.models.dtomodels;
 
+import lombok.Getter;
 import restmodule.models.Channel;
 import restmodule.models.TextChannel;
 import restmodule.models.VoiceChannel;
 
+@Getter
 public class ChannelDTO {
     private int id;
     private String name;
     private ChannelType type;
+    private int server_id;
 
     public ChannelDTO() {
     }
@@ -27,15 +30,4 @@ public class ChannelDTO {
         }
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public ChannelType getType() {
-        return type;
-    }
 }
