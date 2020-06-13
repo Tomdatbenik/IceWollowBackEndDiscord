@@ -45,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/RestModule/src/test/resources/test" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -57,12 +57,12 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\WebSocketModule" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\test\resources" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\resources\test" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\test\java\restmodule" />
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\resources" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\WebSocketModule\src\main\resources" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\test" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="restmodule.controller" />
@@ -71,15 +71,15 @@
       <recent name="serverwebsocket.messages" />
       <recent name="restmodule.service" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\resources\test" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\test\java\restmodule" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\resources" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\test\resources\test" />
       <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\test\resources" />
-      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\test" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\WebSocketModule" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule" />
+      <recent name="C:\Development\School\Semester_4\Fun4\Github_projects\IceWollowBackEnd\IceWollowBackEnd\RestModule\src\main\java\restmodule" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestApplication">
+  <component name="RunManager" selected="JUnit.All in RestModule">
     <configuration name="All in RestModule" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestModule" />
       <option name="PACKAGE_NAME" value="" />
@@ -88,7 +88,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChannelController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestModule" />
       <extension name="coverage">
         <pattern>
@@ -97,13 +97,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="restmodule.controller" />
-      <option name="MAIN_CLASS_NAME" value="restmodule.controller.ChannelController" />
+      <option name="MAIN_CLASS_NAME" value="restmodule.controller.ServerControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChannelController.channelAddSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.serverAddTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestModule" />
       <extension name="coverage">
         <pattern>
@@ -112,22 +112,22 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="restmodule.controller" />
-      <option name="MAIN_CLASS_NAME" value="restmodule.controller.ChannelController" />
-      <option name="METHOD_NAME" value="channelAddSuccess" />
+      <option name="MAIN_CLASS_NAME" value="restmodule.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="serverAddTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="restmodule.controller in RestModule" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="restmodule in RestModule" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestModule" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="restmodule.controller.*" />
+          <option name="PATTERN" value="restmodule.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="restmodule.controller" />
+      <option name="PACKAGE_NAME" value="restmodule" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -155,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.RestApplication" />
-        <item itemvalue="JUnit.restmodule.controller in RestModule" />
-        <item itemvalue="JUnit.ChannelController.channelAddSuccess" />
         <item itemvalue="JUnit.All in RestModule" />
-        <item itemvalue="JUnit.ChannelController" />
+        <item itemvalue="JUnit.UserControllerTest.serverAddTest" />
+        <item itemvalue="Spring Boot.RestApplication" />
+        <item itemvalue="JUnit.restmodule in RestModule" />
+        <item itemvalue="JUnit.ServerControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -205,6 +205,7 @@
       <workItem from="1591873968285" duration="599000" />
       <workItem from="1591949080191" duration="4028000" />
       <workItem from="1592041589202" duration="2606000" />
+      <workItem from="1592047554168" duration="6875000" />
     </task>
     <servers />
   </component>
@@ -224,10 +225,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590577139589" />
-    <state x="92" y="92" width="1736" height="896" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1590579201234">
+    <state x="92" y="92" width="1736" height="896" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1592049408755">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="92" y="92" width="1736" height="896" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590579201234" />
+    <state x="92" y="92" width="1736" height="896" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1592049408755" />
     <state x="664" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589805147121">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -246,46 +248,46 @@
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591085398566" />
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1591949098000" />
-    <state width="1877" height="343" key="GridCell.Tab.0.bottom" timestamp="1592044250975">
+    <state width="1877" height="343" key="GridCell.Tab.0.bottom" timestamp="1592058898137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="343" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592044250975" />
-    <state width="1877" height="343" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592041851686" />
-    <state width="1877" height="343" key="GridCell.Tab.0.center" timestamp="1592044250975">
+    <state width="1877" height="343" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592058898137" />
+    <state width="1877" height="343" key="GridCell.Tab.0.center" timestamp="1592058898137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="343" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592044250975" />
-    <state width="1877" height="343" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592041851686" />
-    <state width="1877" height="343" key="GridCell.Tab.0.left" timestamp="1592044250975">
+    <state width="1877" height="343" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592058898137" />
+    <state width="1877" height="343" key="GridCell.Tab.0.left" timestamp="1592058898137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="343" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592044250975" />
-    <state width="1877" height="343" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592041851686" />
-    <state width="1877" height="343" key="GridCell.Tab.0.right" timestamp="1592044250975">
+    <state width="1877" height="343" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592058898137" />
+    <state width="1877" height="343" key="GridCell.Tab.0.right" timestamp="1592058898137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="343" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592044250975" />
-    <state width="1877" height="343" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592041851686" />
-    <state width="1877" height="343" key="GridCell.Tab.1.bottom" timestamp="1592044250976">
+    <state width="1877" height="343" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592058898137" />
+    <state width="1877" height="343" key="GridCell.Tab.1.bottom" timestamp="1592058327332">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="343" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592044250976" />
-    <state width="1877" height="343" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592041851686" />
-    <state width="1877" height="343" key="GridCell.Tab.1.center" timestamp="1592044250976">
+    <state width="1877" height="343" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592058327332" />
+    <state width="1877" height="343" key="GridCell.Tab.1.center" timestamp="1592058327332">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="343" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592044250976" />
-    <state width="1877" height="343" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592041851686" />
-    <state width="1877" height="343" key="GridCell.Tab.1.left" timestamp="1592044250976">
+    <state width="1877" height="343" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592058327332" />
+    <state width="1877" height="343" key="GridCell.Tab.1.left" timestamp="1592058327332">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="343" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592044250976" />
-    <state width="1877" height="343" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592041851686" />
-    <state width="1877" height="343" key="GridCell.Tab.1.right" timestamp="1592044250976">
+    <state width="1877" height="343" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592058327332" />
+    <state width="1877" height="343" key="GridCell.Tab.1.right" timestamp="1592058327332">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="343" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1592044250976" />
-    <state width="1877" height="343" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592041851686" />
+    <state width="1877" height="343" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592058327332" />
     <state width="1877" height="421" key="GridCell.Tab.2.bottom" timestamp="1591997189199">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -306,11 +308,11 @@
     </state>
     <state width="1877" height="363" key="GridCell.Tab.2.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1590410613873" />
     <state width="1877" height="421" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1591997189199" />
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1591949079779">
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1592047583416">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1591085378820" />
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591949079779" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1592047583416" />
     <state x="342" y="235" key="new project wizard" timestamp="1589796541164">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

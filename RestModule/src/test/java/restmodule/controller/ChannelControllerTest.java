@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.web.servlet.MockMvc;
@@ -14,7 +13,6 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -23,7 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @Sql(scripts = "/test/serverTest.sql")
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 @TestPropertySource("/applicationtest.properties")
-public class ChannelController {
+public class ChannelControllerTest {
     private MockMvc mockMvc;
 
     @Autowired
@@ -37,7 +35,7 @@ public class ChannelController {
     @Test
     void channelAddSuccess() throws Exception {
          mockMvc.perform(
-                MockMvcRequestBuilders.post("/channel/add")
+                MockMvcRequestBuilders.post("/channel")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"server_id\": 1, \"name\": \"test\", \"type\": \"VOICE\"}")
                         .accept(MediaType.APPLICATION_JSON))
@@ -48,7 +46,7 @@ public class ChannelController {
     @Test
     void channelAddNoServer() throws Exception {
         mockMvc.perform(
-                MockMvcRequestBuilders.post("/channel/add")
+                MockMvcRequestBuilders.post("/channel")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"server_id\": 999, \"name\": \"test\", \"type\": \"VOICE\"}")
                         .accept(MediaType.APPLICATION_JSON))
@@ -59,7 +57,7 @@ public class ChannelController {
     @Test
     void channelAddShortName() throws Exception {
         mockMvc.perform(
-                MockMvcRequestBuilders.post("/channel/add")
+                MockMvcRequestBuilders.post("/channel")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"server_id\": 1, \"name\": \"t\", \"type\": \"VOICE\"}")
                         .accept(MediaType.APPLICATION_JSON))

@@ -176,11 +176,14 @@ public class ServerManager {
                 observers.stream().forEach(o -> {
                     List<User> users = c.getUsers().stream().filter(u -> u.getId() == o.getClient().getUser().getId()).collect(Collectors.toList());
 
-                    if (o.getChannel().getId() != c.getId() && users != null) {
+                    if(o.getChannel() != null)
+                    {
+                        if (o.getChannel().getId() != c.getId() && users != null) {
 
-                        users.stream().forEach(u -> {
-                            removeUsers.add(u);
-                        });
+                            users.stream().forEach(u -> {
+                                removeUsers.add(u);
+                            });
+                        }
                     }
                 });
 
