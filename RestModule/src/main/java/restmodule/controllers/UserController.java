@@ -31,7 +31,7 @@ public class UserController {
     }
 
     @CrossOrigin(origins = {"*"})
-    @PostMapping(value = "/add")
+    @PostMapping()
     public boolean addUser(@RequestBody String user)
     {
         Gson gson = new Gson();

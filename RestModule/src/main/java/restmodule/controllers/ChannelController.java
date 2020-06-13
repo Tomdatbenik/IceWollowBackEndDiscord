@@ -26,8 +26,6 @@ public class ChannelController {
     ChannelService channelService;
     ServerService serverService;
 
-    private Gson gson;
-
     @CrossOrigin(origins = {"*"})
     @PostMapping()
     public ResponseEntity addChannel(@RequestBody ChannelDTO channelDTO) {

@@ -65,7 +65,19 @@ public class ServerManager {
         IWServer server = activeServers.stream().filter(s -> s.getId() == serverId).findAny().orElse(null);
 
         if (server != null) {
-            observer.setServer(server);
+            if(observer.getServer() == server)
+            {
+                IWServer foundServer = serverContainerLogic.getServerById(serverId);
+
+                if(foundServer!= null)
+                {
+                    observer.setServer(foundServer);
+                }
+            }
+            else
+            {
+                observer.setServer(server);
+            }
         } else {
             server = serverContainerLogic.getServerById(serverId);
 

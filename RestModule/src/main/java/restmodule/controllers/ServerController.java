@@ -30,7 +30,7 @@ public class ServerController {
     private Gson gson = new Gson();
 
     @CrossOrigin(origins = {"*"})
-    @PostMapping(value = "/add")
+    @PostMapping()
     public ResponseEntity<ServerDTO> addServer(@RequestBody AddServerDto server)
     {
         if(server.getName().length() < 5 || server.getOwner() == null || server.getOwner().getId() == 0)
@@ -51,34 +51,24 @@ public class ServerController {
 
     @CrossOrigin(origins = {"*"})
     @GetMapping(value = "/getbyuser")
-    public ResponseEntity<List<ServerDTO>> getallservers(String email)
-    {
+    public ResponseEntity<List<ServerDTO>> getallservers(String email) {
         User user = userService.getUserByEmail(email);
-        List<IWServer> servers =  serverService.getAllServersByUser(user);
-        List<ServerDTO> serverDTOS = new ArrayList<>();
 
-        //TODO dto's dont work
-        if(servers != null)
+        if (user != null)
         {
-            servers.stream().forEach(s-> serverDTOS.add(new ServerDTO(s)));
+            List<IWServer> servers =  serverService.getAllServersByUser(user);
+            List<ServerDTO> serverDTOS = new ArrayList<>();
+
+            //TODO dto's dont work
+            if(servers != null)
+            {
+                servers.stream().forEach(s-> serverDTOS.add(new ServerDTO(s)));
+            }
+
+            return new ResponseEntity(servers,HttpStatus.OK);
         }
 
-        return new ResponseEntity(servers,HttpStatus.OK);
-    }
-
-    @CrossOrigin(origins = {"*"})
-    @GetMapping(value = "/invitecode")
-    public ResponseEntity getInviteCode(int server_id)
-    {
-        IWServer server = serverService.getServerById(server_id);
-
-        if(server != null)
-        {
-            String code = server.getCode();
-            return new ResponseEntity(code ,HttpStatus.OK);
-        }
-
-        return new ResponseEntity(null, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @CrossOrigin(origins = {"*"})
