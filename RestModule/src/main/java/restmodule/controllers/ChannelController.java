@@ -29,7 +29,7 @@ public class ChannelController {
     private Gson gson;
 
     @CrossOrigin(origins = {"*"})
-    @PostMapping(value = "/add")
+    @PostMapping()
     public ResponseEntity addChannel(@RequestBody ChannelDTO channelDTO) {
 
         IWServer iwServer = serverService.getServerById(channelDTO.getServer_id());
